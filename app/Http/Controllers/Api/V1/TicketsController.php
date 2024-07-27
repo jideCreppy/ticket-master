@@ -4,16 +4,18 @@ namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Api\APIController;
 use App\Http\Filters\V1\TicketFilter;
-use App\Http\Requests\API\V1\StoreTicketRequest;
-use App\Http\Requests\API\V1\UpdateTicketRequest;
+use App\Http\Requests\Api\V1\Tickets\StoreTicketRequest;
+use App\Http\Requests\Api\V1\Tickets\UpdateTicketRequest;
 use App\Http\Resources\Api\V1\Tickets\TicketResource;
 use App\Models\Ticket;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
+use App\Policies\V1\TicketPolicy;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class TicketsController extends APIController
 {
+    protected const POLICY_CLASS = TicketPolicy::class;
+
     /**
      * Show all tickets.
      *
@@ -67,9 +69,21 @@ class TicketsController extends APIController
      *
      * @group Tickets
      */
-    public function update(UpdateTicketRequest $request, Ticket $ticket)
+    public function update(UpdateTicketRequest $request, Ticket $ticket): TicketResource
     {
-        //
+        $attributes = $request->validated();
+
+        //Policy check
+        $this->checkPermission('update', $ticket);
+
+        $ticket->update([
+            'title' => $attributes['data']['attributes']['title'],
+            'description' => $attributes['data']['attributes']['description'],
+            'status' => $attributes['data']['attributes']['status'],
+            'user_id' => $attributes['data']['relationships']['author']['data']['id'],
+        ]);
+
+        return new TicketResource($ticket->fresh());
     }
 
     /**
@@ -79,16 +93,13 @@ class TicketsController extends APIController
      *
      * @group Tickets
      */
-    public function destroy($ticket_id): JsonResponse
+    public function destroy(Ticket $ticket): JsonResponse
     {
-        try {
-            $ticket = Ticket::findOrFail($ticket_id);
-            $ticket->delete();
+        //Policy check
+        $this->checkPermission('delete', $ticket);
 
-            return $this->ok('Ticket Deleted');
+        $ticket->delete();
 
-        } catch (ModelNotFoundException $exception) {
-            return $this->ok('', ['message' => 'The ticket with id '.$ticket_id.' does not exist.', 'statusCode' => 404]);
-        }
+        return $this->ok('Deleted successfully.');
     }
 }

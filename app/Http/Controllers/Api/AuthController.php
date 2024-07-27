@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Http\Permissions\V1\Abilities;
 use App\Http\Requests\UserLoginRequest;
 use App\Http\Requests\UserRegistrationRequest;
 use App\Models\User;
@@ -37,7 +38,7 @@ class AuthController extends APIController
 
         return $this->ok(
             $credentials['email'],
-            ['token' => $user->createToken('API token: '.$credentials['email'], ['*'], now()->addDay())->plainTextToken]
+            ['token' => $user->createToken('API token: '.$credentials['email'], Abilities::getAbilities($user), now()->addDay())->plainTextToken]
         );
     }
 

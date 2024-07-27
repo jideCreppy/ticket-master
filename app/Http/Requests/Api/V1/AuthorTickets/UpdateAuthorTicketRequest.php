@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Requests\API\V1;
+namespace App\Http\Requests\Api\V1\AuthorTickets;
 
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateTicketRequest extends FormRequest
+class UpdateAuthorTicketRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,7 +26,6 @@ class UpdateTicketRequest extends FormRequest
             'data.attributes.title' => ['sometimes', 'string', 'max:255'],
             'data.attributes.description' => ['sometimes', 'string', 'max:255'],
             'data.attributes.status' => ['required', 'sometimes', 'in:A,C,H,X,O'],
-            'data.relationships.author.data.id' => ['required', 'integer'],
         ];
     }
 }
