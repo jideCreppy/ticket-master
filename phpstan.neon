@@ -13,6 +13,6 @@ parameters:
         - '#^Access to an undefined property App\\Http\\Resources\\Api\\V1\\.*#'
 #
 #    excludePaths:
-##        - ./*/*/FileToBeExcluded.php
+#        - ./*/*/FileToBeExcluded.php
 #
 #    checkMissingIterableValueType: false

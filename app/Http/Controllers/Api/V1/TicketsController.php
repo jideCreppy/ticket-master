@@ -19,7 +19,7 @@ class TicketsController extends APIController
      */
     public function index(TicketFilter $filters)
     {
-        return TicketResource::collection(Ticket::filter($filters)->paginate());
+        return TicketResource::collection(Ticket::filter($filters)->latest('id')->paginate(5));
     }
 
     /**

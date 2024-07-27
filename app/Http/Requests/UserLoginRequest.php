@@ -17,13 +17,13 @@ class UserLoginRequest extends FormRequest
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
+     * @return array<string, mixed>
      */
     public function rules(): array
     {
         return [
-            'email' => ['required' , 'string', 'email'],
-            'password' => ['required', 'string', 'min:3'],
+            'email' => ['required', 'string', 'email'],
+            'password' => ['required', 'string', 'min:3', 'max:20'],
         ];
     }
 }

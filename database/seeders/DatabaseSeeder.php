@@ -5,7 +5,6 @@ namespace Database\Seeders;
 use App\Models\Ticket;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Database\Factories\TicketFactory;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,13 +14,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $users =  User::factory(10)->create();
+        $users = User::factory(10)->create();
 
-         Ticket::factory()->count(100)->recycle($users)->create();
+        Ticket::factory()->count(100)->recycle($users)->create();
 
-//        User::factory()->create([
-//            'name' => 'Test User',
-//            'email' => 'test@example.com',
-//        ]);
+        User::factory()->hasTickets(10)->create([
+            'name' => 'Jide',
+            'email' => 'jide.creppy@gmail.com',
+            'is_admin' => true,
+        ]);
     }
 }

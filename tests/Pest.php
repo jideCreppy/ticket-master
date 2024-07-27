@@ -27,7 +27,7 @@ uses(
 |
 */
 
-expect()->extend('toBeOne', function () {
+expect()->extend('toBeOnes', function () {
     return $this->toBe(1);
 });
 

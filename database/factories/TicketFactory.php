@@ -20,7 +20,7 @@ class TicketFactory extends Factory
         return [
             'user_id' => User::factory(),
             'title' => $this->faker->sentence(),
-            'description' => $this->faker->paragraph(),
+            'description' => $this->faker->sentence(),
             'status' => $this->faker->randomElement(['A', 'C', 'H', 'X', 'O']),
         ];
     }
