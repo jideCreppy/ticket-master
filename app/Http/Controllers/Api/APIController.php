@@ -13,7 +13,7 @@ class APIController extends Controller
 
     protected const POLICY_CLASS = '';
 
-    public function checkPermission(string $ability, Model|string $model): void
+    public function applyPolicy(string $ability, Model|string $model): void
     {
         Gate::authorize($ability, [$model, static::POLICY_CLASS]);
     }

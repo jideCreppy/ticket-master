@@ -49,7 +49,7 @@ class User extends Authenticatable
         ];
     }
 
-    public function scopeFilter(Builder $query, QueryFilter $filters)
+    public function scopeFilter(Builder $query, QueryFilter $filters): Builder
     {
         return $filters->apply($query);
     }

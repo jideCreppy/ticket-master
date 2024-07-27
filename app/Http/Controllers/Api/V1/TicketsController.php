@@ -37,6 +37,9 @@ class TicketsController extends APIController
      */
     public function store(StoreTicketRequest $request): TicketResource|JsonResponse
     {
+        //Policy check
+        $this->applyPolicy('create', Ticket::class);
+
         $attributes = $request->validated();
         $authorId = $attributes['data']['relationships']['author']['data']['id'];
 
@@ -74,7 +77,7 @@ class TicketsController extends APIController
         $attributes = $request->validated();
 
         //Policy check
-        $this->checkPermission('update', $ticket);
+        $this->applyPolicy('update', $ticket);
 
         $ticket->update([
             'title' => $attributes['data']['attributes']['title'],
@@ -96,7 +99,7 @@ class TicketsController extends APIController
     public function destroy(Ticket $ticket): JsonResponse
     {
         //Policy check
-        $this->checkPermission('delete', $ticket);
+        $this->applyPolicy('delete', $ticket);
 
         $ticket->delete();
 

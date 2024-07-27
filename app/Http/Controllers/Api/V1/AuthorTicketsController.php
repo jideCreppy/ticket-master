@@ -33,10 +33,14 @@ class AuthorTicketsController extends APIController
     {
         $attributes = $request->validated();
 
+        //Policy check
+        $this->applyPolicy('create', Ticket::class);
+
         $ticket = Ticket::create([
             'title' => $attributes['data']['attributes']['title'],
             'description' => $attributes['data']['attributes']['description'],
             'status' => $attributes['data']['attributes']['status'],
+            'user_id' => $author->id,
         ]);
 
         return new TicketResource($ticket);
@@ -54,7 +58,7 @@ class AuthorTicketsController extends APIController
         $attributes = $request->validated();
 
         //Policy check
-        $this->checkPermission('update', $ticket);
+        $this->applyPolicy('update', $ticket);
 
         $ticket->update([
             'title' => $attributes['data']['attributes']['title'],
@@ -75,7 +79,7 @@ class AuthorTicketsController extends APIController
     public function destroy(UpdateAuthorTicketRequest $request, User $author, Ticket $ticket): JsonResponse
     {
         //Policy check
-        $this->checkPermission('delete', $ticket);
+        $this->applyPolicy('delete', $ticket);
 
         $ticket->delete();
 

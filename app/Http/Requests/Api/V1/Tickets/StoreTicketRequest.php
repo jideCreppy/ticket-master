@@ -2,9 +2,9 @@
 
 namespace App\Http\Requests\Api\V1\Tickets;
 
-use Illuminate\Foundation\Http\FormRequest;
+use App\Http\Requests\Api\V1\ApiFormRequests;
 
-class StoreTicketRequest extends FormRequest
+class StoreTicketRequest extends ApiFormRequests
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -21,12 +21,24 @@ class StoreTicketRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
+        $rules = [
             'data.attributes.title' => ['required', 'string', 'max:255'],
             'data.attributes.description' => ['required', 'string', 'max:255'],
             'data.attributes.status' => ['required', 'string', 'in:A,C,H,X,O'],
-            'data.relationships.author.data.id' => ['required', 'integer', 'exists:users,id'],
+            'data.relationships.author.data.id' => ['prohibited'],
         ];
+
+        if ($this->canCreateOwn()) {
+            if (auth()->user()->id == request()->all()['data']['relationships']['author']['data']['id']) {
+                $rules['data.relationships.author.data.id'] = ['required', 'integer', 'exists:users,id', 'size:'.auth()->user()->id];
+            }
+        }
+
+        if ($this->canCreateAny()) {
+            $rules['data.relationships.author.data.id'] = ['required', 'integer', 'exists:users,id'];
+        }
+
+        return $rules;
     }
 
     /**
@@ -36,7 +48,7 @@ class StoreTicketRequest extends FormRequest
     {
         return [
             'data.attributes.status' => 'The status must be one of the following: A, C, H, X, O.',
-            'data.relationships.author.data.id' => 'The author must exist in the database.',
+            'data.relationships.author.data.id.prohibited' => 'Prohibited operation.',
         ];
     }
 }

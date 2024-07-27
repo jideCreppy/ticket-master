@@ -2,11 +2,10 @@
 
 namespace App\Http\Requests\Api\V1\Tickets;
 
-use App\Http\Permissions\V1\Abilities;
+use App\Http\Requests\Api\V1\ApiFormRequests;
 use Illuminate\Contracts\Validation\ValidationRule;
-use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateTicketRequest extends FormRequest
+class UpdateTicketRequest extends ApiFormRequests
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -30,13 +29,13 @@ class UpdateTicketRequest extends FormRequest
             'data.relationships.author.data.id' => ['prohibited'],
         ];
 
-        if (auth()->user()->tokenCan(Abilities::UPDATE_OWN_TICKET)) {
+        if ($this->canUpdateOwn()) {
             if (auth()->user()->id == $this->ticket->user_id) {
                 $rules['data.relationships.author.data.id'] = ['required', 'integer', 'exists:users,id', 'size:'.auth()->user()->id];
             }
         }
 
-        if (auth()->user()->tokenCan(Abilities::UPDATE_TICKET)) {
+        if ($this->canUpdateAny()) {
             $rules['data.relationships.author.data.id'] = ['required', 'integer', 'exists:users,id'];
         }
 

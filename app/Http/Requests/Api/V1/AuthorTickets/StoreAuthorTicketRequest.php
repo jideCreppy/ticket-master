@@ -35,7 +35,6 @@ class StoreAuthorTicketRequest extends FormRequest
     {
         return [
             'data.attributes.status' => 'The status must be one of the following: A, C, H, X, O.',
-            'author' => 'The author must exist in the database.',
         ];
     }
 }
