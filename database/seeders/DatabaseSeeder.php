@@ -19,8 +19,8 @@ class DatabaseSeeder extends Seeder
         Ticket::factory()->count(100)->recycle($users)->create();
 
         User::factory()->hasTickets(10)->create([
-            'name' => 'Jide',
-            'email' => 'jide.creppy@gmail.com',
+            'name' => 'Manager',
+            'email' => 'manager@gmail.com',
             'is_admin' => true,
         ]);
     }

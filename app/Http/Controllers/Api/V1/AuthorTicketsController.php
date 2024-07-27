@@ -4,15 +4,14 @@ namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Api\APIController;
 use App\Http\Filters\V1\TicketFilter;
-use App\Http\Resources\Api\V1\TicketResource;
-use App\Models\Ticket;
+use App\Http\Resources\Api\V1\Tickets\TicketResource;
+use App\Models\User;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class AuthorTicketsController extends APIController
 {
-    public function index($author_id, TicketFilter $filters)
+    public function index(TicketFilter $filters, User $author): AnonymousResourceCollection
     {
-        return TicketResource::collection(
-            Ticket::where('user_id', $author_id)->filter($filters)->paginate()
-        );
+        return TicketResource::collection($author->tickets()->filter($filters)->paginate(10));
     }
 }

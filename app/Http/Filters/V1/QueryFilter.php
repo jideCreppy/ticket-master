@@ -7,9 +7,18 @@ use Illuminate\Support\Str;
 
 abstract class QueryFilter
 {
-    protected $builder;
+    protected Builder $builder;
 
-    protected $sortable = [];
+    protected array $sortable = [];
+
+    public function include($value): Builder
+    {
+        if (! $value) {
+            return $this->builder;
+        }
+
+        return $this->builder->with($value);
+    }
 
     public function apply(Builder $builder): Builder
     {
@@ -24,7 +33,7 @@ abstract class QueryFilter
         return $this->builder;
     }
 
-    public function filter($arr)
+    public function filter($arr): Builder
     {
         foreach ($arr as $key => $value) {
             if (method_exists($this, $key)) {

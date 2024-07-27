@@ -6,7 +6,6 @@ use App\Http\Requests\UserLoginRequest;
 use App\Http\Requests\UserRegistrationRequest;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -15,7 +14,7 @@ class AuthController extends APIController
     /**
      * Login user
      *
-     * Authenticates the user and returns a user token
+     * Authenticate the user and return their fresh personal access.
      *
      * @unauthenticated
      *
@@ -38,29 +37,12 @@ class AuthController extends APIController
 
         return $this->ok(
             $credentials['email'],
-            ['token' => $user->createToken($credentials['email'], ['*'], now()->addMonth())->plainTextToken]
+            ['token' => $user->createToken('API token: '.$credentials['email'], ['*'], now()->addDay())->plainTextToken]
         );
     }
 
     /**
-     * Logout user
-     *
-     * Logs out the authenticated user and destroys the user token
-     *
-     * @authenticated
-     *
-     * @group Authentication
-     */
-    public function logout(Request $request): JsonResponse
-    {
-        //@phpstan-ignore-next-line
-        $request->user()->currentAccessToken()->delete();
-
-        return $this->ok('Logout successfully');
-    }
-
-    /**
-     * Register a new user
+     * Register a new user and return their personal access token
      *
      * @unauthenticated
      *
@@ -73,11 +55,28 @@ class AuthController extends APIController
         $user = User::create([
             'name' => $credentials['name'],
             'email' => $credentials['email'],
-            'password' => $credentials['password'], // User model will handle cast operation for password
+            'password' => $credentials['password'], // User model handles encryption for passwords
         ]);
 
-        $token = $user->createToken($credentials['email'], ['*'], now()->addMonth())->plainTextToken;
+        $token = $user->createToken($credentials['email'], ['*'], now()->addDay())->plainTextToken;
 
-        return $this->ok($credentials['email'], compact('token'));
+        return $this->ok('API token: '.$credentials['email'], compact('token'));
+    }
+
+    /**
+     * Logout user
+     *
+     * Logs out the authenticated user and destroy their personal access token
+     *
+     * @authenticated
+     *
+     * @group Authentication
+     */
+    public function logout(): JsonResponse
+    {
+        //@phpstan-ignore-next-line
+        auth()->user()->currentAccessToken()->delete();
+
+        return $this->ok('Logout successfully');
     }
 }

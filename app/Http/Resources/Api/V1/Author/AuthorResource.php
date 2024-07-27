@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Resources\Api\V1;
+namespace App\Http\Resources\Api\V1\Author;
 
+use App\Http\Resources\Api\V1\Tickets\TicketResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class UserResource extends JsonResource
+class AuthorResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -15,8 +16,8 @@ class UserResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
+            'type' => 'authors',
             'id' => $this->id,
-            'title' => 'users',
             'attributes' => [
                 'name' => $this->name,
                 'email' => $this->email,
@@ -25,12 +26,12 @@ class UserResource extends JsonResource
                     'createdAt' => $this->created_at,
                     'updatedAt' => $this->updated_at,
                 ]
-                )
+                ),
             ],
-            'includes' =>  TicketResource::collection($this->whenLoaded('tickets')),
+            'includes' => TicketResource::collection($this->whenLoaded('tickets')),
             'links' => [
                 'self' => route('authors.show', ['author' => $this->id]),
-            ]
+            ],
         ];
     }
 }

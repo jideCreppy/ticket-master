@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Resources\Api\V1;
+namespace App\Http\Resources\Api\V1\Tickets;
 
+use App\Http\Resources\Api\V1\Author\AuthorResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -14,9 +15,9 @@ class TicketResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return[
-            'id' => $this->id,
+        return [
             'type' => 'tickets',
+            'id' => $this->id,
             'attributes' => [
                 'title' => $this->title,
                 'description' => $this->when($request->routeIs('tickets.show'), $this->description),
@@ -25,15 +26,17 @@ class TicketResource extends JsonResource
                 'updatedAt' => $this->updated_at,
             ],
             'relationships' => [
-                'author' =>[
-                    'id' => $this->user_id,
-                    'type' => 'User',
+                'author' => [
+                    'data' => [
+                        'type' => 'Author',
+                        'id' => $this->user_id,
+                        'links' => [
+                            'self' => route('authors.show', ['author' => $this->user_id]),
+                        ],
+                    ],
                 ],
-                'links' => [
-                    'self' => route('authors.show', ['author' => $this->user_id])
-                ]
             ],
-            'includes' => new UserResource($this->whenLoaded('author')),
+            'includes' => new AuthorResource($this->whenLoaded('author')),
             'links' => [
                 'self' => route('tickets.show', ['ticket' => $this->id]),
             ],

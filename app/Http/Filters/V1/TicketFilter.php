@@ -4,16 +4,7 @@ namespace App\Http\Filters\V1;
 
 class TicketFilter extends QueryFilter
 {
-    protected $sortable = ['title', 'created_at', 'updated_at'];
-
-    public function include($value)
-    {
-        if (! $value) {
-            return $this->builder;
-        }
-
-        $this->builder->with($value);
-    }
+    protected array $sortable = ['id', 'title', 'created_at', 'updated_at'];
 
     public function status(string $value): void
     {
@@ -27,15 +18,15 @@ class TicketFilter extends QueryFilter
         $this->builder->where('title', 'like', $title);
     }
 
-    public function createdAt($value): void
+    public function createdAt(string $date): void
     {
-        $dates = explode(',', $value);
+        $dates = explode(',', $date);
 
         if (count($dates) > 1) {
             $this->builder->whereBetween('created_at', $dates);
         }
 
-        $this->builder->whereDate('created_at', $value);
+        $this->builder->whereDate('created_at', $date);
 
     }
 

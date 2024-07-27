@@ -17,7 +17,7 @@ class StoreTicketRequest extends FormRequest
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
+     * @return array<string, mixed>
      */
     public function rules(): array
     {
@@ -25,14 +25,18 @@ class StoreTicketRequest extends FormRequest
             'data.attributes.title' => ['required', 'string', 'max:255'],
             'data.attributes.description' => ['required', 'string', 'max:255'],
             'data.attributes.status' => ['required', 'string', 'in:A,C,H,X,O'],
-            'data.relationships.author.data.id' => ['required', 'integer'],
+            'data.relationships.author.data.id' => ['required', 'integer', 'exists:users,id'],
         ];
     }
 
-    public function messages()
+    /**
+     * @return string[]
+     */
+    public function messages(): array
     {
         return [
-            'data.attributes.status.in' => 'The status must be one of the following: A, C, H, X, O.',
+            'data.attributes.status' => 'The status must be one of the following: A, C, H, X, O.',
+            'data.relationships.author.data.id' => 'The author must exist in the database.',
         ];
     }
 }

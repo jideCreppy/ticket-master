@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Api\APIController;
 use App\Http\Filters\V1\AuthorFilter;
-use App\Http\Resources\Api\V1\UserResource;
+use App\Http\Resources\Api\V1\Author\AuthorResource;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -15,7 +15,7 @@ class AuthorsController extends APIController
      */
     public function index(AuthorFilter $filters)
     {
-        return UserResource::collection(User::with('tickets')->filter($filters)->paginate());
+        return AuthorResource::collection(User::with('tickets')->filter($filters)->paginate());
     }
 
     /**
@@ -31,7 +31,7 @@ class AuthorsController extends APIController
      */
     public function show(User $author, AuthorFilter $filters)
     {
-        return new UserResource($author->load('tickets')->filter($filters)->first());
+        return new AuthorResource($author->load('tickets')->filter($filters)->first());
     }
 
     /**
@@ -39,7 +39,7 @@ class AuthorsController extends APIController
      */
     public function update(Request $request, User $author)
     {
-
+        //
     }
 
     /**

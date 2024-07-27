@@ -6,56 +6,66 @@ use App\Http\Controllers\Api\APIController;
 use App\Http\Filters\V1\TicketFilter;
 use App\Http\Requests\API\V1\StoreTicketRequest;
 use App\Http\Requests\API\V1\UpdateTicketRequest;
-use App\Http\Resources\Api\V1\TicketResource;
+use App\Http\Resources\Api\V1\Tickets\TicketResource;
 use App\Models\Ticket;
-use App\Models\User;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class TicketsController extends APIController
 {
     /**
-     * Display a listing of the resource.
+     * Show all tickets.
+     *
+     * @authenticated
+     *
+     * @group Tickets
      */
-    public function index(TicketFilter $filters)
+    public function index(TicketFilter $filters): AnonymousResourceCollection
     {
-        return TicketResource::collection(Ticket::filter($filters)->latest('id')->paginate(5));
+        return TicketResource::collection(Ticket::filter($filters)->latest('id')->paginate(10));
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a new ticket.
+     *
+     * @authenticated
+     *
+     * @group Tickets
      */
     public function store(StoreTicketRequest $request): TicketResource|JsonResponse
     {
-        try {
-            User::findOrFail(request('data.relationships.author.data.id'));
-        } catch (ModelNotFoundException $exception) {
-            return $this->ok('', [
-                'message' => 'The user with id '.request('data.relationships.author.data.id').' does not exist.',
-                'statusCode' => 404]
-            );
-        }
+        $attributes = $request->validated();
+        $authorId = $attributes['data']['relationships']['author']['data']['id'];
 
         $ticket = Ticket::create([
-            'user_id' => request('data.relationships.author.data.id'),
-            'title' => request('data.attributes.title'),
-            'description' => request('data.attributes.description'),
-            'status' => request('data.attributes.status'),
+            'user_id' => $authorId,
+            'title' => $attributes['data']['attributes']['title'],
+            'description' => $attributes['data']['attributes']['description'],
+            'status' => $attributes['data']['attributes']['status'],
         ]);
 
         return new TicketResource($ticket);
     }
 
     /**
-     * Display the specified resource.
+     * Show the specified ticket.
+     *
+     * @authenticated
+     *
+     * @group Tickets
      */
-    public function show(Ticket $ticket)
+    public function show(Ticket $ticket): TicketResource
     {
         return new TicketResource($ticket);
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified ticket.
+     *
+     * @authenticated
+     *
+     * @group Tickets
      */
     public function update(UpdateTicketRequest $request, Ticket $ticket)
     {
@@ -63,9 +73,13 @@ class TicketsController extends APIController
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Delete the specified ticket.
+     *
+     * @authenticated
+     *
+     * @group Tickets
      */
-    public function destroy($ticket_id)
+    public function destroy($ticket_id): JsonResponse
     {
         try {
             $ticket = Ticket::findOrFail($ticket_id);
