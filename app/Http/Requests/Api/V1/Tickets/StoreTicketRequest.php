@@ -22,6 +22,11 @@ class StoreTicketRequest extends ApiFormRequests
     public function rules(): array
     {
         $rules = [
+            'data' => ['required', 'array'],
+            'data.attributes' => ['required', 'array'],
+            'data.relationships' => ['required', 'array'],
+            'data.relationships.author' => ['required', 'array'],
+            'data.relationships.author.data' => ['required', 'array'],
             'data.attributes.title' => ['required', 'string', 'max:255'],
             'data.attributes.description' => ['required', 'string', 'max:255'],
             'data.attributes.status' => ['required', 'string', 'in:A,C,H,X,O'],
@@ -49,6 +54,32 @@ class StoreTicketRequest extends ApiFormRequests
         return [
             'data.attributes.status' => 'The status must be one of the following: A, C, H, X, O.',
             'data.relationships.author.data.id.prohibited' => 'Prohibited operation.',
+        ];
+    }
+
+    public function bodyParameters()
+    {
+        return [
+            'data.attributes.title' => [
+                'type' => 'string',
+                'description' => 'The title of the ticket.',
+                'example' => 'Support Request',
+            ],
+            'data.attributes.description' => [
+                'type' => 'string',
+                'description' => 'The description of the ticket.',
+                'example' => 'New ticket for support.',
+            ],
+            'data.attributes.status' => [
+                'type' => 'string',
+                'description' => 'The status of the ticket.',
+                'example' => 'A',
+            ],
+            'data.relationships.author.data.id' => [
+                'type' => 'integer',
+                'description' => 'The authors id related to the ticket.',
+                'example' => 1,
+            ],
         ];
     }
 }

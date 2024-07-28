@@ -12,7 +12,7 @@ class ApiFormRequests extends FormRequest
      */
     protected function canCreateOwn()
     {
-        return auth()->user()->tokenCan(Abilities::CREATE_OWN_TICKET);
+        return auth()->user()?->tokenCan(Abilities::CREATE_OWN_TICKET);
     }
 
     /**
@@ -20,7 +20,7 @@ class ApiFormRequests extends FormRequest
      */
     protected function canCreateAny()
     {
-        return auth()->user()->tokenCan(Abilities::CREATE_TICKET);
+        return auth()->user()?->tokenCan(Abilities::CREATE_TICKET);
     }
 
     /**
@@ -28,7 +28,7 @@ class ApiFormRequests extends FormRequest
      */
     protected function canUpdateOwn()
     {
-        return auth()->user()->tokenCan(Abilities::UPDATE_OWN_TICKET);
+        return auth()->user()?->tokenCan(Abilities::UPDATE_OWN_TICKET);
     }
 
     /**
@@ -36,6 +36,6 @@ class ApiFormRequests extends FormRequest
      */
     protected function canUpdateAny()
     {
-        return auth()->user()->tokenCan(Abilities::UPDATE_TICKET);
+        return auth()->user()?->tokenCan(Abilities::UPDATE_TICKET);
     }
 }

@@ -13,13 +13,52 @@ use Symfony\Component\HttpFoundation\Response;
 class AuthController extends APIController
 {
     /**
-     * Login user
+     * Register User
      *
-     * Authenticate the user and return their fresh personal access.
+     * Register a new user and return a new bearer token.
      *
      * @unauthenticated
      *
      * @group Authentication
+     *
+     * @subgroup User Registration
+     *
+     * @response 201
+     * {
+     * "message": "API token: manager@example.com",
+     * "status": 200,
+     * "data": {"token": "YOUR_AUTH_KEY"}
+     * }
+     */
+    public function register(UserRegistrationRequest $request): JsonResponse
+    {
+        $credentials = $request->validated();
+
+        $user = User::create([
+            'name' => $credentials['name'],
+            'email' => $credentials['email'],
+            'password' => $credentials['password'], // User model handles encryption for passwords
+        ]);
+
+        $token = $user->createToken($credentials['email'], ['*'], now()->addDay())->plainTextToken;
+
+        return $this->ok('API token: '.$credentials['email'], compact('token'), 201);
+    }
+
+    /**
+     * Login User
+     *
+     * Authenticate a user and return a new bearer token.
+     *
+     * @unauthenticated
+     *
+     * @group Authentication
+     *
+     * @subgroup User Authentication
+     *
+     * @responseFile  201 storage/responses/api/V1/auth/login_success.post.json
+     *
+     * @response 401 {"message": "Invalid credentials."}
      */
     public function login(UserLoginRequest $request): JsonResponse
     {
@@ -43,41 +82,23 @@ class AuthController extends APIController
     }
 
     /**
-     * Register a new user and return their personal access token
+     * Logout User
      *
-     * @unauthenticated
-     *
-     * @group Authentication
-     */
-    public function register(UserRegistrationRequest $request): JsonResponse
-    {
-        $credentials = $request->validated();
-
-        $user = User::create([
-            'name' => $credentials['name'],
-            'email' => $credentials['email'],
-            'password' => $credentials['password'], // User model handles encryption for passwords
-        ]);
-
-        $token = $user->createToken($credentials['email'], ['*'], now()->addDay())->plainTextToken;
-
-        return $this->ok('API token: '.$credentials['email'], compact('token'));
-    }
-
-    /**
-     * Logout user
-     *
-     * Logs out the authenticated user and destroy their personal access token
+     * Sign out the authenticated user and delete their assigned bearer token.
      *
      * @authenticated
      *
      * @group Authentication
+     *
+     * @subgroup User Authentication
+     *
+     * @response 200 {"message": "You have been signed out"}
      */
     public function logout(): JsonResponse
     {
         //@phpstan-ignore-next-line
         auth()->user()->currentAccessToken()->delete();
 
-        return $this->ok('Logout successfully');
+        return $this->ok('You have been signed out');
     }
 }

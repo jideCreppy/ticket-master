@@ -10,10 +10,10 @@ endpoints:
     metadata:
       groupName: Authentication
       groupDescription: ''
-      subgroup: ''
+      subgroup: 'User Authentication'
       subgroupDescription: ''
-      title: 'Login user'
-      description: 'Authenticates the user and returns a token'
+      title: 'Login User'
+      description: 'Authenticate a user and return a new bearer token.'
       authenticated: false
       custom: []
     headers:
@@ -28,25 +28,115 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: dibbert.barton@example.org
+        example: fernando.anderson@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
       password:
         name: password
-        description: 'Must be at least 3 characters.'
+        description: 'Must be at least 3 characters. Must not be greater than 20 characters.'
         required: true
-        example: 'EuEd.4Lh8N^H*5fp)'
+        example: 'G_0^Eo/1Y/$}]b$~`Z'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: dibbert.barton@example.org
-      password: 'EuEd.4Lh8N^H*5fp)'
+      email: fernando.anderson@example.net
+      password: 'G_0^Eo/1Y/$}]b$~`Z'
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 201
+        content: |
+          {
+              "message": "manager@example.com",
+              "status": 200,
+              "data": {
+                  "token": "YOUR_AUTH_KEY"
+              }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 401
+        content: '{"message": "Invalid credentials."}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/register
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: 'User Registration'
+      subgroupDescription: ''
+      title: 'Register User'
+      description: 'Register a new user and return a new bearer token.'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must be at least 3 characters. Must not be greater than 20 characters.'
+        required: true
+        example: numloi
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: guadalupe45@example.org
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: 'Must be at least 3 characters. Must not be greater than 20 characters.'
+        required: true
+        example: 'ddHmJDYi+sms{ob'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: numloi
+      email: guadalupe45@example.org
+      password: 'ddHmJDYi+sms{ob'
+    fileParameters: []
+    responses:
+      -
+        status: 201
+        content: |-
+          {
+          "message": "API token: manager@example.com",
+          "status": 200,
+          "data": {"token": "YOUR_AUTH_KEY"}
+          }
+        headers: []
+        description: ''
+        custom: []
     responseFields: []
     auth: []
     controller: null
@@ -60,10 +150,10 @@ endpoints:
     metadata:
       groupName: Authentication
       groupDescription: ''
-      subgroup: ''
+      subgroup: 'User Authentication'
       subgroupDescription: ''
-      title: 'Logout user'
-      description: 'Endpoint to log out in user'
+      title: 'Logout User'
+      description: 'Sign out the authenticated user and delete their assigned bearer token.'
       authenticated: true
       custom: []
     headers:
@@ -77,12 +167,18 @@ endpoints:
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 200
+        content: '{"message": "You have been signed out"}'
+        headers: []
+        description: ''
+        custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 10|Pkx8jotblY2en7Qkw4K4ZO0frpZsqHXMlq0h9zK6a7c4369a'
+      - 'Bearer 2|VM1zTltTltTE6rTGN7BpAum59qwu7YYN39hiNBpR4637810a'
     controller: null
     method: null
     route: null

@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
 
         User::factory()->hasTickets(10)->create([
             'name' => 'Manager',
-            'email' => 'manager@gmail.com',
+            'email' => 'manager@example.com',
             'is_admin' => true,
         ]);
     }

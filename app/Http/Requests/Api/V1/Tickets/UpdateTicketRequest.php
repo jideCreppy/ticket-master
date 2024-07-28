@@ -23,9 +23,14 @@ class UpdateTicketRequest extends ApiFormRequests
     public function rules(): array
     {
         $rules = [
+            'data' => ['required', 'array'],
+            'data.attributes' => ['required', 'array'],
             'data.attributes.title' => ['sometimes', 'string', 'max:255'],
             'data.attributes.description' => ['sometimes', 'string', 'max:255'],
             'data.attributes.status' => ['required', 'sometimes', 'in:A,C,H,X,O'],
+            'data.relationships' => ['required', 'array'],
+            'data.relationships.author' => ['required', 'array'],
+            'data.relationships.author.data' => ['required', 'array'],
             'data.relationships.author.data.id' => ['prohibited'],
         ];
 

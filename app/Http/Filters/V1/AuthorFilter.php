@@ -2,20 +2,35 @@
 
 namespace App\Http\Filters\V1;
 
+use Illuminate\Database\Eloquent\Builder;
+
 class AuthorFilter extends QueryFilter
 {
-    protected array $sortable = ['id', 'created_at', 'updated_at', 'email_verified_at'];
+    protected array $sortable = [
+        'id',
+        'name',
+        'email',
+        'created_at',
+        'updated_at',
+        'email_verified_at',
+    ];
 
-    public function id($ids): void
+    public function id($ids): Builder
     {
         $arrIds = explode(',', $ids);
 
         if (count($arrIds) > 1) {
-            $this->builder->whereIn('id', $arrIds);
+            return $this->builder->whereIn('id', $arrIds);
         }
 
-        $this->builder->where('id', $ids);
+        return $this->builder->where('id', $ids);
+    }
 
+    public function name($name): void
+    {
+        $title = str_replace('*', '%', $name);
+
+        $this->builder->where('title', 'like', $name);
     }
 
     public function createdAt(string $date): void

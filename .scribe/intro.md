@@ -1,6 +1,6 @@
 # Introduction
 
-Ticket Management API.
+Ticket Master API Documentation (V1)
 
 <aside>
     <strong>Base URL</strong>: <code>http://localhost:8000</code>

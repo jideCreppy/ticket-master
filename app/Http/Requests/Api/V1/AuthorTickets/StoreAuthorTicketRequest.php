@@ -17,11 +17,13 @@ class StoreAuthorTicketRequest extends FormRequest
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, mixed>
+     * @return array<string, list<string>>
      */
     public function rules(): array
     {
         return [
+            'data' => ['required', 'array'],
+            'data.attributes' => ['required', 'array'],
             'data.attributes.title' => ['required', 'string', 'max:255'],
             'data.attributes.description' => ['required', 'string', 'max:255'],
             'data.attributes.status' => ['required', 'string', 'in:A,C,H,X,O'],
@@ -35,6 +37,18 @@ class StoreAuthorTicketRequest extends FormRequest
     {
         return [
             'data.attributes.status' => 'The status must be one of the following: A, C, H, X, O.',
+        ];
+    }
+
+    public function bodyParameters(): array
+    {
+        return [
+            'data.attributes' => [
+                'type' => 'object',
+            ],
+            'data.attributes.title' => [
+                'type' => 'string',
+            ],
         ];
     }
 }

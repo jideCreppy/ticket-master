@@ -36,7 +36,7 @@ return Application::configure(basePath: dirname(__DIR__))
             return response()->json([
                 'error' => [
                     'type' => class_basename(get_class($e)),
-                    'status' => intval($e->getCode()), // returns 0 if no code
+                    'status' => $e->getCode(),
                     'message' => $e->getMessage(),
                 ],
             ]);

@@ -1,0 +1,7 @@
+{
+    "message": "manager@example.com",
+    "status": 200,
+    "data": {
+        "token": "YOUR_AUTH_KEY"
+    }
+}
