@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Filters\V1;
+namespace App\Http\Filters\V1\Filters;
 
+use App\Http\Filters\V1\QueryFilter;
 use Illuminate\Database\Eloquent\Builder;
 
 class AuthorFilter extends QueryFilter

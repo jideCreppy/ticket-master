@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Api\APIController;
-use App\Http\Filters\V1\AuthorFilter;
+use App\Http\Filters\V1\Filters\AuthorFilter;
 use App\Http\Resources\Api\V1\Author\AuthorResource;
 use App\Models\User;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;

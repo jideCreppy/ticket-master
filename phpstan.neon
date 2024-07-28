@@ -10,7 +10,7 @@ parameters:
     level: 5
 
     ignoreErrors:
-        - '#^Access to an undefined property App\\Http\\Resources\\Api\\V1\\.*#'
+       - '#^Access to an undefined property App\\Http\\Resources\\Api\\.+#'
 #
 #    excludePaths:
 #        - ./*/*/FileToBeExcluded.php

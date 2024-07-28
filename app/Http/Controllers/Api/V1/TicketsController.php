@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Api\APIController;
-use App\Http\Filters\V1\TicketFilter;
+use App\Http\Filters\V1\Filters\TicketFilter;
 use App\Http\Requests\Api\V1\Tickets\StoreTicketRequest;
 use App\Http\Requests\Api\V1\Tickets\UpdateTicketRequest;
 use App\Http\Resources\Api\V1\Tickets\TicketResource;

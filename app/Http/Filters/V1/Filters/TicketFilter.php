@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Http\Filters\V1;
+namespace App\Http\Filters\V1\Filters;
+
+use App\Http\Filters\V1\QueryFilter;
 
 class TicketFilter extends QueryFilter
 {
