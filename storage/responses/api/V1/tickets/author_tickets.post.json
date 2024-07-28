@@ -1,0 +1,26 @@
+{
+    "data": {
+        "type": "tickets",
+        "id": 223,
+        "attributes": {
+            "title": "New Ticket",
+            "status": "A",
+            "createdAt": "2024-07-28T11:21:18.000000Z",
+            "updatedAt": "2024-07-28T11:21:18.000000Z"
+        },
+        "relationships": {
+            "author": {
+                "data": {
+                    "type": "Author",
+                    "id": 2,
+                    "links": {
+                        "self": "http://localhost:8000/api/V1/authors/2"
+                    }
+                }
+            }
+        },
+        "links": {
+            "self": "http://localhost:8000/api/V1/tickets/223"
+        }
+    }
+}
