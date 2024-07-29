@@ -29,7 +29,7 @@ Run composer install
 
 ```php
 Run php artisan key:generate
-This should generate a new APP_KEY environment variable in your .env file
+This should generate a new APP_KEY environment variable in your .env file with your applications key
 ```
 # Database
 
