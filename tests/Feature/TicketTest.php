@@ -56,6 +56,7 @@ it('cannot create a ticket for another user as a non-admin user', function () {
     $this->payload['data']['relationships']['author']['data']['id'] = $anotherUser->id;
 
     $response = $this->actingAs($this->author)->postJson($url, $this->payload);
+
     $response->assertJsonFragment(['status' => 422]);
 });
 
