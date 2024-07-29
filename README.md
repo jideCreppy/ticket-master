@@ -31,6 +31,17 @@ Run composer install
 Run php artisan key:generate
 This should generate a new APP_KEY environment variable in your .env file
 ```
+# Database
+
+### Update the following .env variables
+```php
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=sail
+DB_PASSWORD=password
+```
 
 ### Open a new terminal to create the database and start the server
 
