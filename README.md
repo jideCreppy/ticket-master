@@ -10,7 +10,8 @@
 6. Larastan/PHPStan Code/Static analysis (code quality)
 7. Pest - Architecture Testing (code quality)
 8. Pest - Unit and Feature Testing (code quality)
-9. Restful APIs
+9. Restful APIs 
+10. Restful API Responses (JSON API Specification)
 
 ## Dependencies
 1. PHP 8.2
