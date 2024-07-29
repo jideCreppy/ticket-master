@@ -16,7 +16,7 @@
 ## Dependencies
 1. PHP 8.2
 2. Composer
-3. NPM (Nope Package Manager)
+3. NPM (Node Package Manager)
 4. Docker Desktop (make sure this is started and running)
 
 ## Within the project folder
