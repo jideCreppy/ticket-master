@@ -1,15 +1,16 @@
 # Ticket Master
 
-### Ticket Master is a fun Laravel(V.11) API back-end project demonstrating the use of modern API development techniques used in a variety of systems today such as:
+### Ticket Master is a fun service desk ticketing API back-end built with Laravel(V.11) to demonstrating the use of modern API development techniques adopted in modern systems today such as:
 
 1. API versioning
 2. Token Authentication
-3. Laravel Sail (local development containers)
-4. Scribe API endpoint documentation
-5. Larastan/PHPStan Code/Static analysis (code quality)
-6. Pest - Architecture Testing (code quality)
-7. Pest - Unit and Feature Testing (code quality)
-8. Restful APIs
+3. Token Abilities and Access Privileges
+4. Laravel Sail (local development containers)
+5. Scribe API endpoint documentation
+6. Larastan/PHPStan Code/Static analysis (code quality)
+7. Pest - Architecture Testing (code quality)
+8. Pest - Unit and Feature Testing (code quality)
+9. Restful APIs
 
 ## Dependencies
 1. PHP 8.2
