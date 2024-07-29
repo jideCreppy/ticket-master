@@ -1,11 +1,11 @@
 # Ticket Master
 
-### Ticket Master is a fun Laravel(V.11) API backe-end demonstrating the use of modern API development techniques used in systems today such as:
+### Ticket Master is a fun Laravel(V.11) API back-end project demonstrating the use of modern API development techniques used in a variety of systems today such as:
 
 1. API versioning
 2. Token Authentication
 3. Laravel Sail (local development containers)
-4. Scribe API endpoint documentation generation
+4. Scribe API endpoint documentation
 5. Larastan/PHPStan Code/Static analysis (code quality)
 6. Pest - Architecture Testing (code quality)
 7. Pest - Unit and Feature Testing (code quality)
@@ -27,7 +27,7 @@ Run Composer install
 
 ```php
 Run php artisan key:generate
-This should generate a new APP_KEY environment variable in you .env file
+This should generate a new APP_KEY environment variable in your .env file
 ```
 
 ### Open a new terminal to create the database and start the server
@@ -40,8 +40,8 @@ Run php artisan serve
 
 ### For the full API documentation navigate to http://localhost:8000/docs
 
-## To regenerate a new scribe documentation
-#### Send a POST request to http://localhost:8000/api/login with 'manager@example.com' as the username and 'password' as the password. Copy the token returned and add a new environment variable in the .env file SCRIBE_AUTH_KEY={TOKEN}
+## To regenerate the scribe documentation
+#### Send a POST request to http://localhost:8000/api/login with 'manager@example.com' as the username and 'password' as the password. Copy the token returned and add a new environment variable to the .env file called SCRIBE_AUTH_KEY={TOKEN}
 
 ```php
 Run php artisan scribe:generate
