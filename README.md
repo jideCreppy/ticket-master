@@ -1,6 +1,6 @@
 # Ticket Master
 
-### Ticket Master is a fun service desk ticketing API back-end built with Laravel(V.11) to demonstrating the use of modern API development techniques adopted in modern systems today such as:
+### Ticket Master is a fun service desk ticketing API concept built with Laravel(V.11) to demonstrate the use of modern API development techniques adopted in modern systems today such as:
 
 1. API versioning
 2. Token Authentication
