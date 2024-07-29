@@ -71,7 +71,7 @@ On windows create the above file in the database directory
 Run php artisan test
 ```
 
-## Larastan Code analysis
+## Larastan Code Analysis
 ```php
 Run ./vendor/bin/phpstan analyse --memory-limit=1G
 ```
