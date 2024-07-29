@@ -2,7 +2,7 @@
 
 uses()->group('arch');
 
-it('Tests application wide architecture', function () {
+it('ensures API filters extend the correct base class', function () {
     expect('App\Http\Filters\V1\Filters')->toExtend('App\Http\Filters\V1\QueryFilter');
 });
 
