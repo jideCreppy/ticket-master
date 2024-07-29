@@ -28,7 +28,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: fernando.anderson@example.net
+        example: ehomenick@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -37,14 +37,14 @@ endpoints:
         name: password
         description: 'Must be at least 3 characters. Must not be greater than 20 characters.'
         required: true
-        example: 'G_0^Eo/1Y/$}]b$~`Z'
+        example: 'B_]{l|^?(T82}i'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: fernando.anderson@example.net
-      password: 'G_0^Eo/1Y/$}]b$~`Z'
+      email: ehomenick@example.org
+      password: 'B_]{l|^?(T82}i'
     fileParameters: []
     responses:
       -
@@ -97,7 +97,7 @@ endpoints:
         name: name
         description: 'Must be at least 3 characters. Must not be greater than 20 characters.'
         required: true
-        example: numloi
+        example: qwnvpxs
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -106,7 +106,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: guadalupe45@example.org
+        example: rcollins@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -115,15 +115,15 @@ endpoints:
         name: password
         description: 'Must be at least 3 characters. Must not be greater than 20 characters.'
         required: true
-        example: 'ddHmJDYi+sms{ob'
+        example: 'T0,-kEiC[7y'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: numloi
-      email: guadalupe45@example.org
-      password: 'ddHmJDYi+sms{ob'
+      name: qwnvpxs
+      email: rcollins@example.net
+      password: 'T0,-kEiC[7y'
     fileParameters: []
     responses:
       -
@@ -178,7 +178,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|VM1zTltTltTE6rTGN7BpAum59qwu7YYN39hiNBpR4637810a'
+      - 'Bearer 4|98pB94pQWu71LHCWzXinqKWXAvkq6OaSL8Hf09Iq6c7d1a68'
     controller: null
     method: null
     route: null

@@ -99,7 +99,7 @@ class AuthorTicketsController extends APIController
     }
 
     /**
-     * Delete Authors Ticket.
+     * Delete Authors Ticket
      *
      * Delete the specified authors ticket. Authors logged in can only delete tickets belonging to themselves. Admins have full privileges and can delete tickets belonging to any author.
      *

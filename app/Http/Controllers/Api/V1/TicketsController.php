@@ -17,7 +17,7 @@ class TicketsController extends APIController
     protected const POLICY_CLASS = TicketPolicy::class;
 
     /**
-     * Show all tickets.
+     * Show all tickets
      *
      * Return all tickets. Results can be filtered and sorted.
      *

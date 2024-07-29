@@ -62,11 +62,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: fernando.anderson@example.net
+                  example: ehomenick@example.org
                 password:
                   type: string
                   description: 'Must be at least 3 characters. Must not be greater than 20 characters.'
-                  example: 'G_0^Eo/1Y/$}]b$~`Z'
+                  example: 'B_]{l|^?(T82}i'
               required:
                 - email
                 - password
@@ -114,15 +114,15 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 3 characters. Must not be greater than 20 characters.'
-                  example: numloi
+                  example: qwnvpxs
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: guadalupe45@example.org
+                  example: rcollins@example.net
                 password:
                   type: string
                   description: 'Must be at least 3 characters. Must not be greater than 20 characters.'
-                  example: 'ddHmJDYi+sms{ob'
+                  example: 'T0,-kEiC[7y'
               required:
                 - name
                 - email
@@ -392,6 +392,34 @@ paths:
                               self: 'http://localhost:8000/api/V1/authors/4'
                           links:
                             self: 'http://localhost:8000/api/V1/tickets/89'
+                        -
+                          type: tickets
+                          id: 111
+                          attributes:
+                            title: 'First Ticket'
+                            status: A
+                            createdAt: '2024-07-28T14:56:56.000000Z'
+                            updatedAt: '2024-07-28T14:56:56.000000Z'
+                          relationships:
+                            author:
+                              data:
+                                type: Author
+                                id: 4
+                                links:
+                                  self: 'http://localhost:8000/api/V1/authors/4'
+                          includes:
+                            type: authors
+                            id: 4
+                            attributes:
+                              name: 'Dr. Keira Jerde'
+                              email: brown.dylan@example.net
+                              emailVerifiedAt: '2024-07-28T11:50:47.000000Z'
+                              createdAt: '2024-07-28T11:50:47.000000Z'
+                              updatedAt: '2024-07-28T11:50:47.000000Z'
+                            links:
+                              self: 'http://localhost:8000/api/V1/authors/4'
+                          links:
+                            self: 'http://localhost:8000/api/V1/tickets/111'
                       links:
                         self: 'http://localhost:8000/api/V1/authors/4'
                     -
@@ -404,6 +432,34 @@ paths:
                         createdAt: '2024-07-28T11:50:47.000000Z'
                         updatedAt: '2024-07-28T11:50:47.000000Z'
                       includes:
+                        -
+                          type: tickets
+                          id: 1
+                          attributes:
+                            title: 'Updated Ticket'
+                            status: X
+                            createdAt: '2024-07-28T11:50:47.000000Z'
+                            updatedAt: '2024-07-28T12:28:35.000000Z'
+                          relationships:
+                            author:
+                              data:
+                                type: Author
+                                id: 1
+                                links:
+                                  self: 'http://localhost:8000/api/V1/authors/1'
+                          includes:
+                            type: authors
+                            id: 1
+                            attributes:
+                              name: 'Prof. Rogelio Wilderman'
+                              email: hermina.gulgowski@example.com
+                              emailVerifiedAt: '2024-07-28T11:50:47.000000Z'
+                              createdAt: '2024-07-28T11:50:47.000000Z'
+                              updatedAt: '2024-07-28T11:50:47.000000Z'
+                            links:
+                              self: 'http://localhost:8000/api/V1/authors/1'
+                          links:
+                            self: 'http://localhost:8000/api/V1/tickets/1'
                         -
                           type: tickets
                           id: 10
@@ -1670,34 +1726,6 @@ paths:
                       includes:
                         -
                           type: tickets
-                          id: 1
-                          attributes:
-                            title: 'Aut et magnam consequatur ut veniam eos.'
-                            status: A
-                            createdAt: '2024-07-28T11:50:47.000000Z'
-                            updatedAt: '2024-07-28T11:50:47.000000Z'
-                          relationships:
-                            author:
-                              data:
-                                type: Author
-                                id: 6
-                                links:
-                                  self: 'http://localhost:8000/api/V1/authors/6'
-                          includes:
-                            type: authors
-                            id: 6
-                            attributes:
-                              name: 'Marcia Metz'
-                              email: ruthie66@example.net
-                              emailVerifiedAt: '2024-07-28T11:50:47.000000Z'
-                              createdAt: '2024-07-28T11:50:47.000000Z'
-                              updatedAt: '2024-07-28T11:50:47.000000Z'
-                            links:
-                              self: 'http://localhost:8000/api/V1/authors/6'
-                          links:
-                            self: 'http://localhost:8000/api/V1/tickets/1'
-                        -
-                          type: tickets
                           id: 3
                           attributes:
                             title: 'Inventore molestiae et qui vel aperiam.'
@@ -1752,34 +1780,6 @@ paths:
                               self: 'http://localhost:8000/api/V1/authors/6'
                           links:
                             self: 'http://localhost:8000/api/V1/tickets/5'
-                        -
-                          type: tickets
-                          id: 8
-                          attributes:
-                            title: 'Sed eligendi beatae odit repudiandae qui enim laudantium.'
-                            status: C
-                            createdAt: '2024-07-28T11:50:47.000000Z'
-                            updatedAt: '2024-07-28T11:50:47.000000Z'
-                          relationships:
-                            author:
-                              data:
-                                type: Author
-                                id: 6
-                                links:
-                                  self: 'http://localhost:8000/api/V1/authors/6'
-                          includes:
-                            type: authors
-                            id: 6
-                            attributes:
-                              name: 'Marcia Metz'
-                              email: ruthie66@example.net
-                              emailVerifiedAt: '2024-07-28T11:50:47.000000Z'
-                              createdAt: '2024-07-28T11:50:47.000000Z'
-                              updatedAt: '2024-07-28T11:50:47.000000Z'
-                            links:
-                              self: 'http://localhost:8000/api/V1/authors/6'
-                          links:
-                            self: 'http://localhost:8000/api/V1/tickets/8'
                         -
                           type: tickets
                           id: 16
@@ -3606,6 +3606,34 @@ paths:
                                 self: 'http://localhost:8000/api/V1/authors/4'
                             links:
                               self: 'http://localhost:8000/api/V1/tickets/89'
+                          -
+                            type: tickets
+                            id: 111
+                            attributes:
+                              title: 'First Ticket'
+                              status: A
+                              createdAt: '2024-07-28T14:56:56.000000Z'
+                              updatedAt: '2024-07-28T14:56:56.000000Z'
+                            relationships:
+                              author:
+                                data:
+                                  type: Author
+                                  id: 4
+                                  links:
+                                    self: 'http://localhost:8000/api/V1/authors/4'
+                            includes:
+                              type: authors
+                              id: 4
+                              attributes:
+                                name: 'Dr. Keira Jerde'
+                                email: brown.dylan@example.net
+                                emailVerifiedAt: '2024-07-28T11:50:47.000000Z'
+                                createdAt: '2024-07-28T11:50:47.000000Z'
+                                updatedAt: '2024-07-28T11:50:47.000000Z'
+                              links:
+                                self: 'http://localhost:8000/api/V1/authors/4'
+                            links:
+                              self: 'http://localhost:8000/api/V1/tickets/111'
                         links:
                           self: 'http://localhost:8000/api/V1/authors/4'
                       -
@@ -3618,6 +3646,34 @@ paths:
                           createdAt: '2024-07-28T11:50:47.000000Z'
                           updatedAt: '2024-07-28T11:50:47.000000Z'
                         includes:
+                          -
+                            type: tickets
+                            id: 1
+                            attributes:
+                              title: 'Updated Ticket'
+                              status: X
+                              createdAt: '2024-07-28T11:50:47.000000Z'
+                              updatedAt: '2024-07-28T12:28:35.000000Z'
+                            relationships:
+                              author:
+                                data:
+                                  type: Author
+                                  id: 1
+                                  links:
+                                    self: 'http://localhost:8000/api/V1/authors/1'
+                            includes:
+                              type: authors
+                              id: 1
+                              attributes:
+                                name: 'Prof. Rogelio Wilderman'
+                                email: hermina.gulgowski@example.com
+                                emailVerifiedAt: '2024-07-28T11:50:47.000000Z'
+                                createdAt: '2024-07-28T11:50:47.000000Z'
+                                updatedAt: '2024-07-28T11:50:47.000000Z'
+                              links:
+                                self: 'http://localhost:8000/api/V1/authors/1'
+                            links:
+                              self: 'http://localhost:8000/api/V1/tickets/1'
                           -
                             type: tickets
                             id: 10
@@ -4884,34 +4940,6 @@ paths:
                         includes:
                           -
                             type: tickets
-                            id: 1
-                            attributes:
-                              title: 'Aut et magnam consequatur ut veniam eos.'
-                              status: A
-                              createdAt: '2024-07-28T11:50:47.000000Z'
-                              updatedAt: '2024-07-28T11:50:47.000000Z'
-                            relationships:
-                              author:
-                                data:
-                                  type: Author
-                                  id: 6
-                                  links:
-                                    self: 'http://localhost:8000/api/V1/authors/6'
-                            includes:
-                              type: authors
-                              id: 6
-                              attributes:
-                                name: 'Marcia Metz'
-                                email: ruthie66@example.net
-                                emailVerifiedAt: '2024-07-28T11:50:47.000000Z'
-                                createdAt: '2024-07-28T11:50:47.000000Z'
-                                updatedAt: '2024-07-28T11:50:47.000000Z'
-                              links:
-                                self: 'http://localhost:8000/api/V1/authors/6'
-                            links:
-                              self: 'http://localhost:8000/api/V1/tickets/1'
-                          -
-                            type: tickets
                             id: 3
                             attributes:
                               title: 'Inventore molestiae et qui vel aperiam.'
@@ -4966,34 +4994,6 @@ paths:
                                 self: 'http://localhost:8000/api/V1/authors/6'
                             links:
                               self: 'http://localhost:8000/api/V1/tickets/5'
-                          -
-                            type: tickets
-                            id: 8
-                            attributes:
-                              title: 'Sed eligendi beatae odit repudiandae qui enim laudantium.'
-                              status: C
-                              createdAt: '2024-07-28T11:50:47.000000Z'
-                              updatedAt: '2024-07-28T11:50:47.000000Z'
-                            relationships:
-                              author:
-                                data:
-                                  type: Author
-                                  id: 6
-                                  links:
-                                    self: 'http://localhost:8000/api/V1/authors/6'
-                            includes:
-                              type: authors
-                              id: 6
-                              attributes:
-                                name: 'Marcia Metz'
-                                email: ruthie66@example.net
-                                emailVerifiedAt: '2024-07-28T11:50:47.000000Z'
-                                createdAt: '2024-07-28T11:50:47.000000Z'
-                                updatedAt: '2024-07-28T11:50:47.000000Z'
-                              links:
-                                self: 'http://localhost:8000/api/V1/authors/6'
-                            links:
-                              self: 'http://localhost:8000/api/V1/tickets/8'
                           -
                             type: tickets
                             id: 16
@@ -6810,6 +6810,34 @@ paths:
                                   self: 'http://localhost:8000/api/V1/authors/4'
                               links:
                                 self: 'http://localhost:8000/api/V1/tickets/89'
+                            -
+                              type: tickets
+                              id: 111
+                              attributes:
+                                title: 'First Ticket'
+                                status: A
+                                createdAt: '2024-07-28T14:56:56.000000Z'
+                                updatedAt: '2024-07-28T14:56:56.000000Z'
+                              relationships:
+                                author:
+                                  data:
+                                    type: Author
+                                    id: 4
+                                    links:
+                                      self: 'http://localhost:8000/api/V1/authors/4'
+                              includes:
+                                type: authors
+                                id: 4
+                                attributes:
+                                  name: 'Dr. Keira Jerde'
+                                  email: brown.dylan@example.net
+                                  emailVerifiedAt: '2024-07-28T11:50:47.000000Z'
+                                  createdAt: '2024-07-28T11:50:47.000000Z'
+                                  updatedAt: '2024-07-28T11:50:47.000000Z'
+                                links:
+                                  self: 'http://localhost:8000/api/V1/authors/4'
+                              links:
+                                self: 'http://localhost:8000/api/V1/tickets/111'
                           items:
                             type: object
                             properties:
@@ -7054,7 +7082,7 @@ paths:
           type: integer
   /api/V1/tickets:
     get:
-      summary: 'Show all tickets.'
+      summary: 'Show all tickets'
       operationId: showAllTickets
       description: 'Return all tickets. Results can be filtered and sorted.'
       parameters:
@@ -7269,31 +7297,6 @@ paths:
                         self: 'http://localhost:8000/api/V1/tickets/86'
                     -
                       type: tickets
-                      id: 1
-                      attributes:
-                        title: 'Aut et magnam consequatur ut veniam eos.'
-                        status: A
-                        createdAt: '2024-07-28T11:50:47.000000Z'
-                        updatedAt: '2024-07-28T11:50:47.000000Z'
-                      relationships:
-                        author:
-                          data:
-                            type: Author
-                            id: 6
-                            links:
-                              self: 'http://localhost:8000/api/V1/authors/6'
-                      includes:
-                        type: authors
-                        id: 6
-                        attributes:
-                          name: 'Marcia Metz'
-                          email: ruthie66@example.net
-                        links:
-                          self: 'http://localhost:8000/api/V1/authors/6'
-                      links:
-                        self: 'http://localhost:8000/api/V1/tickets/1'
-                    -
-                      type: tickets
                       id: 55
                       attributes:
                         title: 'Aut sint ipsa ea.'
@@ -7367,6 +7370,31 @@ paths:
                           self: 'http://localhost:8000/api/V1/authors/4'
                       links:
                         self: 'http://localhost:8000/api/V1/tickets/85'
+                    -
+                      type: tickets
+                      id: 4
+                      attributes:
+                        title: 'Autem error incidunt ab sit.'
+                        status: X
+                        createdAt: '2024-07-28T11:50:47.000000Z'
+                        updatedAt: '2024-07-28T11:50:47.000000Z'
+                      relationships:
+                        author:
+                          data:
+                            type: Author
+                            id: 7
+                            links:
+                              self: 'http://localhost:8000/api/V1/authors/7'
+                      includes:
+                        type: authors
+                        id: 7
+                        attributes:
+                          name: 'Jovan Wehner'
+                          email: onie.kub@example.org
+                        links:
+                          self: 'http://localhost:8000/api/V1/authors/7'
+                      links:
+                        self: 'http://localhost:8000/api/V1/tickets/4'
                   links:
                     first: 'http://localhost:8000/api/V1/tickets?page=1'
                     last: 'http://localhost:8000/api/V1/tickets?page=11'
@@ -7589,31 +7617,6 @@ paths:
                           self: 'http://localhost:8000/api/V1/tickets/86'
                       -
                         type: tickets
-                        id: 1
-                        attributes:
-                          title: 'Aut et magnam consequatur ut veniam eos.'
-                          status: A
-                          createdAt: '2024-07-28T11:50:47.000000Z'
-                          updatedAt: '2024-07-28T11:50:47.000000Z'
-                        relationships:
-                          author:
-                            data:
-                              type: Author
-                              id: 6
-                              links:
-                                self: 'http://localhost:8000/api/V1/authors/6'
-                        includes:
-                          type: authors
-                          id: 6
-                          attributes:
-                            name: 'Marcia Metz'
-                            email: ruthie66@example.net
-                          links:
-                            self: 'http://localhost:8000/api/V1/authors/6'
-                        links:
-                          self: 'http://localhost:8000/api/V1/tickets/1'
-                      -
-                        type: tickets
                         id: 55
                         attributes:
                           title: 'Aut sint ipsa ea.'
@@ -7687,6 +7690,31 @@ paths:
                             self: 'http://localhost:8000/api/V1/authors/4'
                         links:
                           self: 'http://localhost:8000/api/V1/tickets/85'
+                      -
+                        type: tickets
+                        id: 4
+                        attributes:
+                          title: 'Autem error incidunt ab sit.'
+                          status: X
+                          createdAt: '2024-07-28T11:50:47.000000Z'
+                          updatedAt: '2024-07-28T11:50:47.000000Z'
+                        relationships:
+                          author:
+                            data:
+                              type: Author
+                              id: 7
+                              links:
+                                self: 'http://localhost:8000/api/V1/authors/7'
+                        includes:
+                          type: authors
+                          id: 7
+                          attributes:
+                            name: 'Jovan Wehner'
+                            email: onie.kub@example.org
+                          links:
+                            self: 'http://localhost:8000/api/V1/authors/7'
+                        links:
+                          self: 'http://localhost:8000/api/V1/tickets/4'
                     items:
                       type: object
                       properties:
@@ -8022,26 +8050,26 @@ paths:
                   type: tickets
                   id: 1
                   attributes:
-                    title: 'Aut et magnam consequatur ut veniam eos.'
-                    description: 'Sed cupiditate qui blanditiis voluptatem.'
-                    status: A
+                    title: 'Updated Ticket'
+                    description: 'updated Ticket being created'
+                    status: X
                     createdAt: '2024-07-28T11:50:47.000000Z'
-                    updatedAt: '2024-07-28T11:50:47.000000Z'
+                    updatedAt: '2024-07-28T12:28:35.000000Z'
                   relationships:
                     author:
                       data:
                         type: Author
-                        id: 6
+                        id: 1
                         links:
-                          self: 'http://localhost:8000/api/V1/authors/6'
+                          self: 'http://localhost:8000/api/V1/authors/1'
                   includes:
                     type: authors
-                    id: 6
+                    id: 1
                     attributes:
-                      name: 'Marcia Metz'
-                      email: ruthie66@example.net
+                      name: 'Prof. Rogelio Wilderman'
+                      email: hermina.gulgowski@example.com
                     links:
-                      self: 'http://localhost:8000/api/V1/authors/6'
+                      self: 'http://localhost:8000/api/V1/authors/1'
                   links:
                     self: 'http://localhost:8000/api/V1/tickets/1'
                 properties:
@@ -8056,19 +8084,19 @@ paths:
                     properties:
                       title:
                         type: string
-                        example: 'Aut et magnam consequatur ut veniam eos.'
+                        example: 'Updated Ticket'
                       description:
                         type: string
-                        example: 'Sed cupiditate qui blanditiis voluptatem.'
+                        example: 'updated Ticket being created'
                       status:
                         type: string
-                        example: A
+                        example: X
                       createdAt:
                         type: string
                         example: '2024-07-28T11:50:47.000000Z'
                       updatedAt:
                         type: string
-                        example: '2024-07-28T11:50:47.000000Z'
+                        example: '2024-07-28T12:28:35.000000Z'
                   relationships:
                     type: object
                     properties:
@@ -8083,13 +8111,13 @@ paths:
                                 example: Author
                               id:
                                 type: integer
-                                example: 6
+                                example: 1
                               links:
                                 type: object
                                 properties:
                                   self:
                                     type: string
-                                    example: 'http://localhost:8000/api/V1/authors/6'
+                                    example: 'http://localhost:8000/api/V1/authors/1'
                   includes:
                     type: object
                     properties:
@@ -8098,22 +8126,22 @@ paths:
                         example: authors
                       id:
                         type: integer
-                        example: 6
+                        example: 1
                       attributes:
                         type: object
                         properties:
                           name:
                             type: string
-                            example: 'Marcia Metz'
+                            example: 'Prof. Rogelio Wilderman'
                           email:
                             type: string
-                            example: ruthie66@example.net
+                            example: hermina.gulgowski@example.com
                       links:
                         type: object
                         properties:
                           self:
                             type: string
-                            example: 'http://localhost:8000/api/V1/authors/6'
+                            example: 'http://localhost:8000/api/V1/authors/1'
                   links:
                     type: object
                     properties:
@@ -8266,15 +8294,15 @@ paths:
                         title:
                           type: string
                           description: 'Must not be greater than 255 characters.'
-                          example: bjtdlxrqekclvgflxnrea
+                          example: rjzmk
                         description:
                           type: string
                           description: 'Must not be greater than 255 characters.'
-                          example: 'Reiciendis est ea ea voluptate.'
+                          example: 'Consequatur laudantium qui aperiam.'
                         status:
                           type: string
                           description: ''
-                          example: H
+                          example: X
                           enum:
                             - A
                             - C
@@ -8299,7 +8327,7 @@ paths:
                                 id:
                                   type: integer
                                   description: ''
-                                  example: 8
+                                  example: 15
               required:
                 - data
     delete:
@@ -8713,7 +8741,7 @@ paths:
                     path: 'http://localhost:8000/api/V1/authors/1/tickets'
                     per_page: 10
                     to: 10
-                    total: 12
+                    total: 13
                 properties:
                   data:
                     type: array
@@ -9148,7 +9176,7 @@ paths:
                         example: 10
                       total:
                         type: integer
-                        example: 12
+                        example: 13
       tags:
         - Tickets
     post:
@@ -9253,15 +9281,15 @@ paths:
                         title:
                           type: string
                           description: 'Must not be greater than 255 characters.'
-                          example: aaurwpohuisphoqsa
+                          example: eysv
                         description:
                           type: string
                           description: 'Must not be greater than 255 characters.'
-                          example: 'Similique omnis error laborum.'
+                          example: 'Est molestias incidunt ipsa nostrum doloribus aut atque.'
                         status:
                           type: string
                           description: ''
-                          example: H
+                          example: O
                           enum:
                             - A
                             - C
@@ -9424,11 +9452,11 @@ paths:
                         title:
                           type: string
                           description: 'Must not be greater than 255 characters.'
-                          example: zdihalry
+                          example: mfyrpiohsitqytlc
                         description:
                           type: string
                           description: 'Must not be greater than 255 characters.'
-                          example: 'Et qui ullam quis omnis.'
+                          example: 'Aliquam nostrum esse voluptas reprehenderit dolorem quibusdam.'
                         status:
                           type: string
                           description: ''
@@ -9442,7 +9470,7 @@ paths:
               required:
                 - data
     delete:
-      summary: 'Delete Authors Ticket.'
+      summary: 'Delete Authors Ticket'
       operationId: deleteAuthorsTicket
       description: 'Delete the specified authors ticket. Authors logged in can only delete tickets belonging to themselves. Admins have full privileges and can delete tickets belonging to any author.'
       parameters: []

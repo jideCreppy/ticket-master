@@ -12,7 +12,7 @@ endpoints:
       groupDescription: ''
       subgroup: Tickets
       subgroupDescription: ''
-      title: 'Show all tickets.'
+      title: 'Show all tickets'
       description: 'Return all tickets. Results can be filtered and sorted.'
       authenticated: true
       custom: []
@@ -80,7 +80,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"type":"tickets","id":88,"attributes":{"title":"Ab quibusdam nemo voluptatem qui odit aut deleniti voluptas.","status":"A","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":3,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/3"}}}},"includes":{"type":"authors","id":3,"attributes":{"name":"Dr. Turner Nicolas","email":"morar.bessie@example.net"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/3"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/88"}},{"type":"tickets","id":62,"attributes":{"title":"Ab tenetur et cum ratione vero unde.","status":"C","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":9,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/9"}}}},"includes":{"type":"authors","id":9,"attributes":{"name":"Prof. Trystan Marvin","email":"wstiedemann@example.org"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/9"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/62"}},{"type":"tickets","id":52,"attributes":{"title":"Aliquam fugiat quia sunt officia ut minima.","status":"C","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":7,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/7"}}}},"includes":{"type":"authors","id":7,"attributes":{"name":"Jovan Wehner","email":"onie.kub@example.org"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/7"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/52"}},{"type":"tickets","id":78,"attributes":{"title":"Asperiores atque tenetur alias id velit incidunt.","status":"X","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":9,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/9"}}}},"includes":{"type":"authors","id":9,"attributes":{"name":"Prof. Trystan Marvin","email":"wstiedemann@example.org"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/9"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/78"}},{"type":"tickets","id":96,"attributes":{"title":"At explicabo aliquam doloribus.","status":"A","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":10,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/10"}}}},"includes":{"type":"authors","id":10,"attributes":{"name":"Prof. Fernando Romaguera PhD","email":"kadin09@example.com"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/10"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/96"}},{"type":"tickets","id":86,"attributes":{"title":"At soluta occaecati doloremque occaecati sit corrupti modi.","status":"H","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":8,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/8"}}}},"includes":{"type":"authors","id":8,"attributes":{"name":"Nathanial Fadel","email":"stiedemann.rocky@example.org"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/8"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/86"}},{"type":"tickets","id":1,"attributes":{"title":"Aut et magnam consequatur ut veniam eos.","status":"A","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":6,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/6"}}}},"includes":{"type":"authors","id":6,"attributes":{"name":"Marcia Metz","email":"ruthie66@example.net"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/6"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/1"}},{"type":"tickets","id":55,"attributes":{"title":"Aut sint ipsa ea.","status":"H","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":2,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/2"}}}},"includes":{"type":"authors","id":2,"attributes":{"name":"Rosemary Parker","email":"towne.alan@example.com"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/2"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/55"}},{"type":"tickets","id":15,"attributes":{"title":"Aut sit at dicta esse blanditiis qui.","status":"A","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":2,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/2"}}}},"includes":{"type":"authors","id":2,"attributes":{"name":"Rosemary Parker","email":"towne.alan@example.com"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/2"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/15"}},{"type":"tickets","id":85,"attributes":{"title":"Aut vero accusantium sunt perferendis autem.","status":"X","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":4,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/4"}}}},"includes":{"type":"authors","id":4,"attributes":{"name":"Dr. Keira Jerde","email":"brown.dylan@example.net"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/4"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/85"}}],"links":{"first":"http:\/\/localhost:8000\/api\/V1\/tickets?page=1","last":"http:\/\/localhost:8000\/api\/V1\/tickets?page=11","prev":null,"next":"http:\/\/localhost:8000\/api\/V1\/tickets?page=2"},"meta":{"current_page":1,"from":1,"last_page":11,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/tickets?page=1","label":"1","active":true},{"url":"http:\/\/localhost:8000\/api\/V1\/tickets?page=2","label":"2","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/tickets?page=3","label":"3","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/tickets?page=4","label":"4","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/tickets?page=5","label":"5","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/tickets?page=6","label":"6","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/tickets?page=7","label":"7","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/tickets?page=8","label":"8","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/tickets?page=9","label":"9","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/tickets?page=10","label":"10","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/tickets?page=11","label":"11","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/tickets?page=2","label":"Next &raquo;","active":false}],"path":"http:\/\/localhost:8000\/api\/V1\/tickets","per_page":10,"to":10,"total":109}}'
+        content: '{"data":[{"type":"tickets","id":88,"attributes":{"title":"Ab quibusdam nemo voluptatem qui odit aut deleniti voluptas.","status":"A","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":3,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/3"}}}},"includes":{"type":"authors","id":3,"attributes":{"name":"Dr. Turner Nicolas","email":"morar.bessie@example.net"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/3"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/88"}},{"type":"tickets","id":62,"attributes":{"title":"Ab tenetur et cum ratione vero unde.","status":"C","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":9,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/9"}}}},"includes":{"type":"authors","id":9,"attributes":{"name":"Prof. Trystan Marvin","email":"wstiedemann@example.org"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/9"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/62"}},{"type":"tickets","id":52,"attributes":{"title":"Aliquam fugiat quia sunt officia ut minima.","status":"C","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":7,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/7"}}}},"includes":{"type":"authors","id":7,"attributes":{"name":"Jovan Wehner","email":"onie.kub@example.org"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/7"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/52"}},{"type":"tickets","id":78,"attributes":{"title":"Asperiores atque tenetur alias id velit incidunt.","status":"X","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":9,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/9"}}}},"includes":{"type":"authors","id":9,"attributes":{"name":"Prof. Trystan Marvin","email":"wstiedemann@example.org"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/9"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/78"}},{"type":"tickets","id":96,"attributes":{"title":"At explicabo aliquam doloribus.","status":"A","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":10,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/10"}}}},"includes":{"type":"authors","id":10,"attributes":{"name":"Prof. Fernando Romaguera PhD","email":"kadin09@example.com"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/10"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/96"}},{"type":"tickets","id":86,"attributes":{"title":"At soluta occaecati doloremque occaecati sit corrupti modi.","status":"H","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":8,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/8"}}}},"includes":{"type":"authors","id":8,"attributes":{"name":"Nathanial Fadel","email":"stiedemann.rocky@example.org"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/8"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/86"}},{"type":"tickets","id":55,"attributes":{"title":"Aut sint ipsa ea.","status":"H","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":2,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/2"}}}},"includes":{"type":"authors","id":2,"attributes":{"name":"Rosemary Parker","email":"towne.alan@example.com"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/2"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/55"}},{"type":"tickets","id":15,"attributes":{"title":"Aut sit at dicta esse blanditiis qui.","status":"A","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":2,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/2"}}}},"includes":{"type":"authors","id":2,"attributes":{"name":"Rosemary Parker","email":"towne.alan@example.com"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/2"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/15"}},{"type":"tickets","id":85,"attributes":{"title":"Aut vero accusantium sunt perferendis autem.","status":"X","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":4,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/4"}}}},"includes":{"type":"authors","id":4,"attributes":{"name":"Dr. Keira Jerde","email":"brown.dylan@example.net"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/4"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/85"}},{"type":"tickets","id":4,"attributes":{"title":"Autem error incidunt ab sit.","status":"X","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":7,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/7"}}}},"includes":{"type":"authors","id":7,"attributes":{"name":"Jovan Wehner","email":"onie.kub@example.org"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/7"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/4"}}],"links":{"first":"http:\/\/localhost:8000\/api\/V1\/tickets?page=1","last":"http:\/\/localhost:8000\/api\/V1\/tickets?page=11","prev":null,"next":"http:\/\/localhost:8000\/api\/V1\/tickets?page=2"},"meta":{"current_page":1,"from":1,"last_page":11,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/tickets?page=1","label":"1","active":true},{"url":"http:\/\/localhost:8000\/api\/V1\/tickets?page=2","label":"2","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/tickets?page=3","label":"3","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/tickets?page=4","label":"4","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/tickets?page=5","label":"5","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/tickets?page=6","label":"6","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/tickets?page=7","label":"7","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/tickets?page=8","label":"8","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/tickets?page=9","label":"9","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/tickets?page=10","label":"10","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/tickets?page=11","label":"11","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/tickets?page=2","label":"Next &raquo;","active":false}],"path":"http:\/\/localhost:8000\/api\/V1\/tickets","per_page":10,"to":10,"total":109}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -91,7 +91,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|VM1zTltTltTE6rTGN7BpAum59qwu7YYN39hiNBpR4637810a'
+      - 'Bearer 4|98pB94pQWu71LHCWzXinqKWXAvkq6OaSL8Hf09Iq6c7d1a68'
     controller: null
     method: null
     route: null
@@ -252,7 +252,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|VM1zTltTltTE6rTGN7BpAum59qwu7YYN39hiNBpR4637810a'
+      - 'Bearer 4|98pB94pQWu71LHCWzXinqKWXAvkq6OaSL8Hf09Iq6c7d1a68'
     controller: null
     method: null
     route: null
@@ -294,7 +294,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"type":"tickets","id":1,"attributes":{"title":"Aut et magnam consequatur ut veniam eos.","description":"Sed cupiditate qui blanditiis voluptatem.","status":"A","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":6,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/6"}}}},"includes":{"type":"authors","id":6,"attributes":{"name":"Marcia Metz","email":"ruthie66@example.net"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/6"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/1"}}'
+        content: '{"type":"tickets","id":1,"attributes":{"title":"Updated Ticket","description":"updated Ticket being created","status":"X","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T12:28:35.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":1,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}}}},"includes":{"type":"authors","id":1,"attributes":{"name":"Prof. Rogelio Wilderman","email":"hermina.gulgowski@example.com"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/1"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -305,7 +305,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|VM1zTltTltTE6rTGN7BpAum59qwu7YYN39hiNBpR4637810a'
+      - 'Bearer 4|98pB94pQWu71LHCWzXinqKWXAvkq6OaSL8Hf09Iq6c7d1a68'
     controller: null
     method: null
     route: null
@@ -365,7 +365,7 @@ endpoints:
         name: data.attributes.title
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: bjtdlxrqekclvgflxnrea
+        example: rjzmk
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -374,7 +374,7 @@ endpoints:
         name: data.attributes.description
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: 'Reiciendis est ea ea voluptate.'
+        example: 'Consequatur laudantium qui aperiam.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -383,7 +383,7 @@ endpoints:
         name: data.attributes.status
         description: ''
         required: true
-        example: H
+        example: X
         type: string
         enumValues:
           - A
@@ -424,7 +424,7 @@ endpoints:
         name: data.relationships.author.data.id
         description: ''
         required: true
-        example: 8
+        example: 15
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -432,13 +432,13 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          title: bjtdlxrqekclvgflxnrea
-          description: 'Reiciendis est ea ea voluptate.'
-          status: H
+          title: rjzmk
+          description: 'Consequatur laudantium qui aperiam.'
+          status: X
         relationships:
           author:
             data:
-              id: 8
+              id: 15
     fileParameters: []
     responses:
       -
@@ -489,7 +489,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|VM1zTltTltTE6rTGN7BpAum59qwu7YYN39hiNBpR4637810a'
+      - 'Bearer 4|98pB94pQWu71LHCWzXinqKWXAvkq6OaSL8Hf09Iq6c7d1a68'
     controller: null
     method: null
     route: null
@@ -544,7 +544,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|VM1zTltTltTE6rTGN7BpAum59qwu7YYN39hiNBpR4637810a'
+      - 'Bearer 4|98pB94pQWu71LHCWzXinqKWXAvkq6OaSL8Hf09Iq6c7d1a68'
     controller: null
     method: null
     route: null
@@ -636,7 +636,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"type":"tickets","id":81,"attributes":{"title":"Doloremque placeat voluptatum ducimus ut similique fuga.","status":"X","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":1,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}}}},"includes":{"type":"authors","id":1,"attributes":{"name":"Prof. Rogelio Wilderman","email":"hermina.gulgowski@example.com","emailVerifiedAt":"2024-07-28T11:50:47.000000Z","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/81"}},{"type":"tickets","id":17,"attributes":{"title":"Dolores reiciendis et voluptatum cumque numquam quam et.","status":"A","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":1,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}}}},"includes":{"type":"authors","id":1,"attributes":{"name":"Prof. Rogelio Wilderman","email":"hermina.gulgowski@example.com","emailVerifiedAt":"2024-07-28T11:50:47.000000Z","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/17"}},{"type":"tickets","id":77,"attributes":{"title":"Doloribus aut fugiat et magni cupiditate.","status":"C","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":1,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}}}},"includes":{"type":"authors","id":1,"attributes":{"name":"Prof. Rogelio Wilderman","email":"hermina.gulgowski@example.com","emailVerifiedAt":"2024-07-28T11:50:47.000000Z","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/77"}},{"type":"tickets","id":58,"attributes":{"title":"Est similique sed optio.","status":"O","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":1,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}}}},"includes":{"type":"authors","id":1,"attributes":{"name":"Prof. Rogelio Wilderman","email":"hermina.gulgowski@example.com","emailVerifiedAt":"2024-07-28T11:50:47.000000Z","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/58"}},{"type":"tickets","id":12,"attributes":{"title":"Et voluptatibus voluptates autem dolore voluptates.","status":"X","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":1,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}}}},"includes":{"type":"authors","id":1,"attributes":{"name":"Prof. Rogelio Wilderman","email":"hermina.gulgowski@example.com","emailVerifiedAt":"2024-07-28T11:50:47.000000Z","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/12"}},{"type":"tickets","id":44,"attributes":{"title":"Facere aliquam architecto expedita error sunt.","status":"X","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":1,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}}}},"includes":{"type":"authors","id":1,"attributes":{"name":"Prof. Rogelio Wilderman","email":"hermina.gulgowski@example.com","emailVerifiedAt":"2024-07-28T11:50:47.000000Z","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/44"}},{"type":"tickets","id":22,"attributes":{"title":"Iusto nam voluptates id quidem dolores ratione velit.","status":"O","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":1,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}}}},"includes":{"type":"authors","id":1,"attributes":{"name":"Prof. Rogelio Wilderman","email":"hermina.gulgowski@example.com","emailVerifiedAt":"2024-07-28T11:50:47.000000Z","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/22"}},{"type":"tickets","id":82,"attributes":{"title":"Officia non repellat quia totam laboriosam quas.","status":"A","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":1,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}}}},"includes":{"type":"authors","id":1,"attributes":{"name":"Prof. Rogelio Wilderman","email":"hermina.gulgowski@example.com","emailVerifiedAt":"2024-07-28T11:50:47.000000Z","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/82"}},{"type":"tickets","id":84,"attributes":{"title":"Sit nesciunt doloremque quia quisquam molestiae nisi.","status":"C","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":1,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}}}},"includes":{"type":"authors","id":1,"attributes":{"name":"Prof. Rogelio Wilderman","email":"hermina.gulgowski@example.com","emailVerifiedAt":"2024-07-28T11:50:47.000000Z","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/84"}},{"type":"tickets","id":10,"attributes":{"title":"Soluta voluptatem vel et doloremque harum.","status":"A","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":1,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}}}},"includes":{"type":"authors","id":1,"attributes":{"name":"Prof. Rogelio Wilderman","email":"hermina.gulgowski@example.com","emailVerifiedAt":"2024-07-28T11:50:47.000000Z","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/10"}}],"links":{"first":"http:\/\/localhost:8000\/api\/V1\/authors\/1\/tickets?page=1","last":"http:\/\/localhost:8000\/api\/V1\/authors\/1\/tickets?page=2","prev":null,"next":"http:\/\/localhost:8000\/api\/V1\/authors\/1\/tickets?page=2"},"meta":{"current_page":1,"from":1,"last_page":2,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/authors\/1\/tickets?page=1","label":"1","active":true},{"url":"http:\/\/localhost:8000\/api\/V1\/authors\/1\/tickets?page=2","label":"2","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/authors\/1\/tickets?page=2","label":"Next &raquo;","active":false}],"path":"http:\/\/localhost:8000\/api\/V1\/authors\/1\/tickets","per_page":10,"to":10,"total":12}}'
+        content: '{"data":[{"type":"tickets","id":81,"attributes":{"title":"Doloremque placeat voluptatum ducimus ut similique fuga.","status":"X","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":1,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}}}},"includes":{"type":"authors","id":1,"attributes":{"name":"Prof. Rogelio Wilderman","email":"hermina.gulgowski@example.com","emailVerifiedAt":"2024-07-28T11:50:47.000000Z","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/81"}},{"type":"tickets","id":17,"attributes":{"title":"Dolores reiciendis et voluptatum cumque numquam quam et.","status":"A","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":1,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}}}},"includes":{"type":"authors","id":1,"attributes":{"name":"Prof. Rogelio Wilderman","email":"hermina.gulgowski@example.com","emailVerifiedAt":"2024-07-28T11:50:47.000000Z","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/17"}},{"type":"tickets","id":77,"attributes":{"title":"Doloribus aut fugiat et magni cupiditate.","status":"C","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":1,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}}}},"includes":{"type":"authors","id":1,"attributes":{"name":"Prof. Rogelio Wilderman","email":"hermina.gulgowski@example.com","emailVerifiedAt":"2024-07-28T11:50:47.000000Z","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/77"}},{"type":"tickets","id":58,"attributes":{"title":"Est similique sed optio.","status":"O","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":1,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}}}},"includes":{"type":"authors","id":1,"attributes":{"name":"Prof. Rogelio Wilderman","email":"hermina.gulgowski@example.com","emailVerifiedAt":"2024-07-28T11:50:47.000000Z","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/58"}},{"type":"tickets","id":12,"attributes":{"title":"Et voluptatibus voluptates autem dolore voluptates.","status":"X","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":1,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}}}},"includes":{"type":"authors","id":1,"attributes":{"name":"Prof. Rogelio Wilderman","email":"hermina.gulgowski@example.com","emailVerifiedAt":"2024-07-28T11:50:47.000000Z","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/12"}},{"type":"tickets","id":44,"attributes":{"title":"Facere aliquam architecto expedita error sunt.","status":"X","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":1,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}}}},"includes":{"type":"authors","id":1,"attributes":{"name":"Prof. Rogelio Wilderman","email":"hermina.gulgowski@example.com","emailVerifiedAt":"2024-07-28T11:50:47.000000Z","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/44"}},{"type":"tickets","id":22,"attributes":{"title":"Iusto nam voluptates id quidem dolores ratione velit.","status":"O","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":1,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}}}},"includes":{"type":"authors","id":1,"attributes":{"name":"Prof. Rogelio Wilderman","email":"hermina.gulgowski@example.com","emailVerifiedAt":"2024-07-28T11:50:47.000000Z","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/22"}},{"type":"tickets","id":82,"attributes":{"title":"Officia non repellat quia totam laboriosam quas.","status":"A","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":1,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}}}},"includes":{"type":"authors","id":1,"attributes":{"name":"Prof. Rogelio Wilderman","email":"hermina.gulgowski@example.com","emailVerifiedAt":"2024-07-28T11:50:47.000000Z","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/82"}},{"type":"tickets","id":84,"attributes":{"title":"Sit nesciunt doloremque quia quisquam molestiae nisi.","status":"C","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":1,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}}}},"includes":{"type":"authors","id":1,"attributes":{"name":"Prof. Rogelio Wilderman","email":"hermina.gulgowski@example.com","emailVerifiedAt":"2024-07-28T11:50:47.000000Z","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/84"}},{"type":"tickets","id":10,"attributes":{"title":"Soluta voluptatem vel et doloremque harum.","status":"A","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"relationships":{"author":{"data":{"type":"Author","id":1,"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}}}},"includes":{"type":"authors","id":1,"attributes":{"name":"Prof. Rogelio Wilderman","email":"hermina.gulgowski@example.com","emailVerifiedAt":"2024-07-28T11:50:47.000000Z","createdAt":"2024-07-28T11:50:47.000000Z","updatedAt":"2024-07-28T11:50:47.000000Z"},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/authors\/1"}},"links":{"self":"http:\/\/localhost:8000\/api\/V1\/tickets\/10"}}],"links":{"first":"http:\/\/localhost:8000\/api\/V1\/authors\/1\/tickets?page=1","last":"http:\/\/localhost:8000\/api\/V1\/authors\/1\/tickets?page=2","prev":null,"next":"http:\/\/localhost:8000\/api\/V1\/authors\/1\/tickets?page=2"},"meta":{"current_page":1,"from":1,"last_page":2,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/authors\/1\/tickets?page=1","label":"1","active":true},{"url":"http:\/\/localhost:8000\/api\/V1\/authors\/1\/tickets?page=2","label":"2","active":false},{"url":"http:\/\/localhost:8000\/api\/V1\/authors\/1\/tickets?page=2","label":"Next &raquo;","active":false}],"path":"http:\/\/localhost:8000\/api\/V1\/authors\/1\/tickets","per_page":10,"to":10,"total":13}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -647,7 +647,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|VM1zTltTltTE6rTGN7BpAum59qwu7YYN39hiNBpR4637810a'
+      - 'Bearer 4|98pB94pQWu71LHCWzXinqKWXAvkq6OaSL8Hf09Iq6c7d1a68'
     controller: null
     method: null
     route: null
@@ -706,7 +706,7 @@ endpoints:
         name: data.attributes.title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: aaurwpohuisphoqsa
+        example: eysv
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -715,7 +715,7 @@ endpoints:
         name: data.attributes.description
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: 'Similique omnis error laborum.'
+        example: 'Est molestias incidunt ipsa nostrum doloribus aut atque.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -724,7 +724,7 @@ endpoints:
         name: data.attributes.status
         description: ''
         required: true
-        example: H
+        example: O
         type: string
         enumValues:
           - A
@@ -737,9 +737,9 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          title: aaurwpohuisphoqsa
-          description: 'Similique omnis error laborum.'
-          status: H
+          title: eysv
+          description: 'Est molestias incidunt ipsa nostrum doloribus aut atque.'
+          status: O
     fileParameters: []
     responses:
       -
@@ -778,7 +778,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|VM1zTltTltTE6rTGN7BpAum59qwu7YYN39hiNBpR4637810a'
+      - 'Bearer 4|98pB94pQWu71LHCWzXinqKWXAvkq6OaSL8Hf09Iq6c7d1a68'
     controller: null
     method: null
     route: null
@@ -848,7 +848,7 @@ endpoints:
         name: data.attributes.title
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: zdihalry
+        example: mfyrpiohsitqytlc
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -857,7 +857,7 @@ endpoints:
         name: data.attributes.description
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: 'Et qui ullam quis omnis.'
+        example: 'Aliquam nostrum esse voluptas reprehenderit dolorem quibusdam.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -879,8 +879,8 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          title: zdihalry
-          description: 'Et qui ullam quis omnis.'
+          title: mfyrpiohsitqytlc
+          description: 'Aliquam nostrum esse voluptas reprehenderit dolorem quibusdam.'
           status: H
     fileParameters: []
     responses:
@@ -932,7 +932,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|VM1zTltTltTE6rTGN7BpAum59qwu7YYN39hiNBpR4637810a'
+      - 'Bearer 4|98pB94pQWu71LHCWzXinqKWXAvkq6OaSL8Hf09Iq6c7d1a68'
     controller: null
     method: null
     route: null
@@ -946,7 +946,7 @@ endpoints:
       groupDescription: ''
       subgroup: 'Author Tickets'
       subgroupDescription: ''
-      title: 'Delete Authors Ticket.'
+      title: 'Delete Authors Ticket'
       description: 'Delete the specified authors ticket. Authors logged in can only delete tickets belonging to themselves. Admins have full privileges and can delete tickets belonging to any author.'
       authenticated: true
       custom: []
@@ -997,7 +997,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 2|VM1zTltTltTE6rTGN7BpAum59qwu7YYN39hiNBpR4637810a'
+      - 'Bearer 4|98pB94pQWu71LHCWzXinqKWXAvkq6OaSL8Hf09Iq6c7d1a68'
     controller: null
     method: null
     route: null
