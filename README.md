@@ -21,7 +21,7 @@
 ## Within the project folder
 
 ```php
-Run Composer install
+Run composer install
 ```
 
 ### Make a copy of .env.example and rename it to .env
