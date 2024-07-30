@@ -75,7 +75,7 @@ MAIL_ENCRYPTION=null
 MAIL_FROM_ADDRESS="admin@ticketmaster.com"
 MAIL_FROM_NAME="${APP_NAME}"
 
-Note: 0.0.0.0 is the defualt docker network bridge IP. You may also be able to substitute this for 'mailpit' which is the network name in docker.
+Note: 0.0.0.0 is the default docker network bridge IP. You may also be able to substitute this for 'mailpit' which is the network name in docker.
 ```
 
 ## Testing
