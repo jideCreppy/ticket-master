@@ -64,7 +64,7 @@ Run php artisan scribe:generate
 ## Mail Notification (Mailpit)
 
 ```php
-Add the following environment variables to your .env configuration file. Then in a new browser window navigate to: http:://http://localhost:8025/ 
+Add the following environment variables to your .env configuration file. Then in a new browser window navigate to: http:://localhost:8025/ 
 
 MAIL_MAILER=smtp
 MAIL_HOST=0.0.0.0
