@@ -43,24 +43,6 @@ DB_DATABASE=laravel
 DB_USERNAME=sail
 DB_PASSWORD=password
 ```
-
-### Open a new terminal to create the database and start the server
-
-```php
-Run sail up -d
-Run php artisan migrate --seed
-Run php artisan serve
-```
-
-### For the full API documentation navigate to http://localhost:8000/docs
-
-## To regenerate the scribe documentation
-#### Send a POST request to http://localhost:8000/api/login with 'manager@example.com' as the username and 'password' as the password. This is an admin user with more privileges/abilities. Other users in the database that aren't admin users can only manage their own information using the API. Copy the token returned and add a new environment variable to the .env file called SCRIBE_AUTH_KEY={TOKEN}
-
-```php
-Run php artisan scribe:generate
-```
-
 ## Mail Notification (Mailpit)
 
 ```php
@@ -76,6 +58,22 @@ MAIL_FROM_ADDRESS="admin@ticketmaster.com"
 MAIL_FROM_NAME="${APP_NAME}"
 
 Note: 0.0.0.0 is the default docker network bridge IP. You may also be able to substitute this for 'mailpit' which is the network name in docker.
+```
+
+### Open a new terminal to create the database and start the database, mail and local web server
+
+```php
+Run sail up -d
+Run php artisan migrate --seed
+Run php artisan serve
+```
+# API Documentation
+### For the full API documentation navigate to http://localhost:8000/docs
+
+### To regenerate the scribe documentation send a POST request to http://localhost:8000/api/login with 'manager@example.com' as the username and 'password' as the password. This is an admin user with more privileges/abilities. Other users in the database that aren't admin users can only manage their own information using the API. Copy the token returned and add a new environment variable to the .env file called SCRIBE_AUTH_KEY={TOKEN}
+
+```php
+Run php artisan scribe:generate
 ```
 
 ## Testing
