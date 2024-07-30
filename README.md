@@ -70,7 +70,8 @@ Run php artisan serve
 # API Documentation
 #### For the full API documentation navigate to http://localhost:8000/docs
 
-#### To regenerate the scribe documentation send a POST request to http://localhost:8000/api/login with 'manager@example.com' as the username and 'password' as the password. This is an admin user with more privileges/abilities. Other users in the database that aren't admin users can only manage their own information using the API. Copy the token returned and add a new environment variable to the .env file called SCRIBE_AUTH_KEY={TOKEN}
+#### To regenerate the scribe documentation send a POST request to http://localhost:8000/api/login with 'manager@example.com' as the username and 'password' as the password. 
+#### This is an admin user with more privileges/abilities. Other users in the database that aren't admin users can only manage their own information using the API. Copy the token returned and add a new environment variable to the .env file called SCRIBE_AUTH_KEY={TOKEN}
 
 ```php
 Run php artisan scribe:generate
