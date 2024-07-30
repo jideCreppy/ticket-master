@@ -43,7 +43,7 @@ DB_DATABASE=laravel
 DB_USERNAME=sail
 DB_PASSWORD=password
 ```
-## Mail Notification (Mailpit)
+# Mail Notification (Mailpit)
 
 ```php
 Add the following environment variables to your .env configuration file. Then in a new browser window navigate to: http:://localhost:8025/ 
