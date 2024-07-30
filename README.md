@@ -13,6 +13,7 @@
 9. Restful APIs 
 10. Restful API Responses (JSON API Specification)
 11. Simple mail notifications using Mailpit
+12. Centralised error handling
 
 ## Dependencies
 1. PHP 8.2
