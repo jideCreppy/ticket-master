@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Permissions\V1\Abilities;
+use App\Mail\TicketCreated;
 use App\Models\User;
+use Illuminate\Support\Facades\Mail;
 use Laravel\Sanctum\Sanctum;
 
 use function Pest\Laravel\post;
@@ -31,6 +33,8 @@ beforeEach(function () {
 });
 
 it('can create a self-assigned ticket as a non-admin user', function () {
+    Mail::fake();
+
     $url = route('tickets.store');
 
     Sanctum::actingAs(
@@ -41,9 +45,13 @@ it('can create a self-assigned ticket as a non-admin user', function () {
     $response = post($url, $this->payload);
 
     $response->assertCreated();
+
+    Mail::assertSent(TicketCreated::class);
 });
 
 it('cannot create a ticket for another user as a non-admin user', function () {
+    Mail::fake();
+
     $url = route('tickets.store');
 
     Sanctum::actingAs(
@@ -58,9 +66,13 @@ it('cannot create a ticket for another user as a non-admin user', function () {
     $response = $this->actingAs($this->author)->postJson($url, $this->payload);
 
     $response->assertJsonFragment(['status' => 422]);
+
+    Mail::assertNothingSent();
 });
 
 it('can create a ticket for another user as an admin user', function () {
+    Mail::fake();
+
     $url = route('tickets.store');
 
     Sanctum::actingAs(
@@ -75,4 +87,6 @@ it('can create a ticket for another user as an admin user', function () {
     $response = $this->actingAs($this->admin)->postJson($url, $this->payload);
 
     $response->assertCreated();
+
+    Mail::assertSent(TicketCreated::class);
 });
