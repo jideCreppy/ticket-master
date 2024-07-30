@@ -7,11 +7,13 @@ use App\Http\Filters\V1\Filters\TicketFilter;
 use App\Http\Requests\Api\V1\AuthorTickets\StoreAuthorTicketRequest;
 use App\Http\Requests\Api\V1\AuthorTickets\UpdateAuthorTicketRequest;
 use App\Http\Resources\Api\V1\Tickets\TicketResource;
+use App\Mail\TicketCreated;
 use App\Models\Ticket;
 use App\Models\User;
 use App\Policies\V1\TicketPolicy;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Support\Facades\Mail;
 
 class AuthorTicketsController extends APIController
 {
@@ -65,6 +67,8 @@ class AuthorTicketsController extends APIController
             'status' => $attributes['data']['attributes']['status'],
             'user_id' => $author->id,
         ]);
+
+        Mail::to($ticket->author)->send(new TicketCreated($ticket));
 
         return response()->json(new TicketResource($ticket), status: 201);
     }

@@ -7,10 +7,12 @@ use App\Http\Filters\V1\Filters\TicketFilter;
 use App\Http\Requests\Api\V1\Tickets\StoreTicketRequest;
 use App\Http\Requests\Api\V1\Tickets\UpdateTicketRequest;
 use App\Http\Resources\Api\V1\Tickets\TicketResource;
+use App\Mail\TicketCreated;
 use App\Models\Ticket;
 use App\Policies\V1\TicketPolicy;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Support\Facades\Mail;
 
 class TicketsController extends APIController
 {
@@ -65,6 +67,8 @@ class TicketsController extends APIController
             'description' => $attributes['data']['attributes']['description'],
             'status' => $attributes['data']['attributes']['status'],
         ]);
+
+        Mail::to($ticket->author)->send(new TicketCreated($ticket));
 
         return response()->json(new TicketResource($ticket), 201);
     }

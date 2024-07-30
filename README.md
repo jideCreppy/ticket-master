@@ -12,6 +12,7 @@
 8. Pest - Unit and Feature Testing (code quality)
 9. Restful APIs 
 10. Restful API Responses (JSON API Specification)
+11. Simple mail notifications using Mailpit
 
 ## Dependencies
 1. PHP 8.2
@@ -59,6 +60,24 @@ Run php artisan serve
 ```php
 Run php artisan scribe:generate
 ```
+
+## Mail Notification (Mailpit)
+
+```php
+Add the following environment variables to your .env configuration file. Then i a new browser window navigate to: http:://http://localhost:8025/ 
+
+MAIL_MAILER=smtp
+MAIL_HOST=0.0.0.0
+MAIL_PORT=1025
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS="admin@ticketmaster.com"
+MAIL_FROM_NAME="${APP_NAME}"
+
+Note: 0.0.0.0 is the defualt docker network bridge IP. You may also be able to substitute this for 'mailpit' which is the network name in docker.
+```
+
 ## Testing
 
 ```php
