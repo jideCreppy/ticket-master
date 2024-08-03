@@ -5,11 +5,11 @@
 1. API versioning
 2. Token Authentication
 3. Token Abilities and Access Privileges
-4. Laravel Sail (local development containers)
+4. Laravel Sail (local development containers - mysql and mailpit)
 5. Scribe API endpoint documentation
 6. Larastan/PHPStan Code/Static analysis (code quality)
 7. Pest - Architecture Testing (code quality)
-8. Pest - Unit and Feature Testing (code quality)
+8. Pest - Feature Testing (code quality)
 9. Restful APIs 
 10. Restful API Responses (JSON API Specification)
 11. Simple mail notifications using Mailpit
