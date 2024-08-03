@@ -9,7 +9,7 @@
 5. Scribe API endpoint documentation
 6. Larastan/PHPStan Code/Static analysis (code quality)
 7. Pest - Architecture Testing (code quality)
-8. Pest - Feature Testing (code quality)
+8. Pest - Feature Tests (code quality)
 9. Restful APIs 
 10. Restful API Responses (JSON API Specification)
 11. Simple mail notifications using Mailpit
