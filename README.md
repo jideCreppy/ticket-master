@@ -8,7 +8,7 @@
 4. Laravel Sail (local development containers - mysql and mailpit)
 5. Scribe API endpoint documentation
 6. Larastan/PHPStan Code/Static analysis (code quality)
-7. Pest - Architecture Testing (code quality)
+7. Pest - Architecture Tests (code quality)
 8. Pest - Feature Tests (code quality)
 9. Restful APIs 
 10. Restful API Responses (JSON API Specification)
