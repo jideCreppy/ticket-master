@@ -46,7 +46,7 @@ DB_USERNAME=sail
 DB_PASSWORD=password
 
 
-Note: If you run into DB connection issues with the host name set as mysql you can substitute the host name for 0.0.0.0 which is the default docker network bridge IP.
+Note: If you run into DB connection issues with the host name (DB_HOST) set as mysql you can substitute the host name (DB_HOST) for 0.0.0.0 which is the default docker network bridge IP.
 ```
 # Mail Notification (Mailpit)
 
