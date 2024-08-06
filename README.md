@@ -13,7 +13,8 @@
 9. Pest - Feature Tests (code quality)
 10. Restful APIs 
 11. Restful API Responses (JSON API Specification)
-12. Simple mail notifications using Mailpit 13Centralised error handling
+12. Simple mail notifications using Mailpit 
+13. Centralised error handling
 
 ## Dependencies
 1. PHP 8.2
