@@ -5,15 +5,15 @@
 1. API versioning
 2. Token Authentication
 3. Token Abilities and Access Privileges
-4. Laravel Sail (local development containers - mysql and mailpit)
-5. Scribe API endpoint documentation
-6. Larastan/PHPStan Code/Static analysis (code quality)
-7. Pest - Architecture Tests (code quality)
-8. Pest - Feature Tests (code quality)
-9. Restful APIs 
-10. Restful API Responses (JSON API Specification)
-11. Simple mail notifications using Mailpit
-12. Centralised error handling
+4. Authorization Policy (versioned)
+5. Laravel Sail (local development containers - mysql and mailpit)
+6. Scribe API endpoint documentation
+7. Larastan/PHPStan Code/Static analysis (code quality)
+8. Pest - Architecture Tests (code quality)
+9. Pest - Feature Tests (code quality)
+10. Restful APIs 
+11. Restful API Responses (JSON API Specification)
+12. Simple mail notifications using Mailpit 13Centralised error handling
 
 ## Dependencies
 1. PHP 8.2
