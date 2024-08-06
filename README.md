@@ -44,6 +44,9 @@ DB_PORT=3306
 DB_DATABASE=laravel
 DB_USERNAME=sail
 DB_PASSWORD=password
+
+
+Note: If you run into DB connection issues with the host name set as mysql you can substitute the host name for 0.0.0.0 which is the default docker network bridge IP.
 ```
 # Mail Notification (Mailpit)
 
