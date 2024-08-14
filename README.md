@@ -24,13 +24,13 @@
 
 ## Within the project folder
 
-```php
+```
 Run composer install
 ```
 
 ### Make a copy of .env.example and rename it to .env
 
-```php
+```
 Run php artisan key:generate
 This should generate a new APP_KEY environment variable in your .env file with your applications key
 ```
@@ -67,7 +67,7 @@ Note: 0.0.0.0 is the default docker network bridge IP. You may also be able to s
 
 ### Open a new terminal to create the database and start the database, mail and local web server
 
-```php
+```
 Run sail up -d
 Run php artisan migrate --seed
 Run php artisan serve
@@ -78,7 +78,7 @@ Run php artisan serve
 #### To regenerate the scribe documentation send a POST request to http://localhost:8000/api/login with 'manager@example.com' as the username and 'password' as the password. 
 #### The above user is an admin user with more privileges/abilities. Other users in the database that aren't admin users can only manage their own information using the API. Copy the token returned and add a new environment variable to the .env file called SCRIBE_AUTH_KEY={TOKEN}
 
-```php
+```
 Run php artisan scribe:generate
 ```
 
@@ -90,12 +90,12 @@ On windows create the above file in the database directory
 ```
 
 
-```php
+```
 Run php artisan test
 ```
 
 ## Larastan Code Analysis
-```php
+```
 Run ./vendor/bin/phpstan analyse --memory-limit=1G
 ```
 
