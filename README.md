@@ -22,18 +22,19 @@
 3. NPM (Node Package Manager)
 4. Docker Desktop (make sure this is started and running)
 
-## Within the project folder
+## Within the project folder run:
 
 ```
-Run composer install
+composer install
 ```
 
-### Make a copy of .env.example and rename it to .env
+### Make a copy of .env.example file and rename it to .env and run:
 
 ```
-Run php artisan key:generate
-This should generate a new APP_KEY environment variable in your .env file with your applications key
+php artisan key:generate
 ```
+#### This should generate a new APP_KEY value in your .env file.
+
 # Database
 
 ### Update the following .env variables
@@ -44,15 +45,14 @@ DB_PORT=3306
 DB_DATABASE=laravel
 DB_USERNAME=sail
 DB_PASSWORD=password
-
-
-Note: If you run into DB connection issues with the host name (DB_HOST) set as mysql you can substitute the host name (DB_HOST) for 0.0.0.0 which is the default docker network bridge IP.
 ```
+
+#### Note: If you run into DB connection issues with the host name (DB_HOST) set as mysql you can substitute the host name (DB_HOST) for 0.0.0.0 which is the default docker network bridge IP.
+
 # Mail Notification (Mailpit)
 
+#### Add the following environment variables to your .env configuration file. In a new browser window navigate to: http:://localhost:8025/
 ```
-Add the following environment variables to your .env configuration file. Then in a new browser window navigate to: http:://localhost:8025/ 
-
 MAIL_MAILER=smtp
 MAIL_HOST=0.0.0.0
 MAIL_PORT=1025
@@ -61,42 +61,40 @@ MAIL_PASSWORD=null
 MAIL_ENCRYPTION=null
 MAIL_FROM_ADDRESS="admin@ticketmaster.com"
 MAIL_FROM_NAME="${APP_NAME}"
-
-Note: 0.0.0.0 is the default docker network bridge IP. You may also be able to substitute this for 'mailpit' which is the network name in docker.
 ```
+#### Note: 0.0.0.0 is the default docker network bridge IP. You may also be able to substitute this for 'mailpit' which is the network name in docker.
 
-### Open a new terminal to create the database and start the database, mail and local web server
+### Open a new terminal to create, start and seed the database server. Also, the following commands will create and start a local mail server and serve the application.
 
 ```
-Run sail up -d
-Run php artisan migrate --seed
-Run php artisan serve
+sail up -d
+php artisan migrate --seed
+php artisan serve
 ```
 # API Documentation
 #### For the full API documentation navigate to http://localhost:8000/docs
 
 #### To regenerate the scribe documentation send a POST request to http://localhost:8000/api/login with 'manager@example.com' as the username and 'password' as the password. 
-#### The above user is an admin user with more privileges/abilities. Other users in the database that aren't admin users can only manage their own information using the API. Copy the token returned and add a new environment variable to the .env file called SCRIBE_AUTH_KEY={TOKEN}
+#### The above user is an admin user with more privileges/abilities. Other users in the database that aren't admin users can only manage their own information using the API. Copy the token returned and add a new environment variable to the .env file called SCRIBE_AUTH_KEY={TOKEN} and run:
 
 ```
-Run php artisan scribe:generate
+php artisan scribe:generate
 ```
 
 ## Testing
 
-```
-On Mac/Linux Run touch database/database.sqlite to create your test database
-On windows create the above file in the database directory
-```
+
+#### On Mac/Linux Run touch database/database.sqlite to create your test database.
+#### On windows create the above file in the database directory. After which you can run:
 
 
 ```
-Run php artisan test
+php artisan test
 ```
 
 ## Larastan Code Analysis
 ```
-Run ./vendor/bin/phpstan analyse --memory-limit=1G
+./vendor/bin/phpstan analyse --memory-limit=1G
 ```
 
 
