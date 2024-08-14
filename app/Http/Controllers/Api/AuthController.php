@@ -40,7 +40,7 @@ class AuthController extends APIController
             'password' => $credentials['password'], // User model handles encryption for passwords
         ]);
 
-        $token = $user->createToken($credentials['email'], ['*'], now()->addDay())->plainTextToken;
+        $token = $user->createToken($credentials['email'], Abilities::getAbilities($user), now()->addDay())->plainTextToken;
 
         return $this->ok('API token: '.$credentials['email'], compact('token'), 201);
     }
