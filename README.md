@@ -37,7 +37,7 @@ This should generate a new APP_KEY environment variable in your .env file with y
 # Database
 
 ### Update the following .env variables
-```php
+```
 DB_CONNECTION=mysql
 DB_HOST=mysql
 DB_PORT=3306
@@ -50,7 +50,7 @@ Note: If you run into DB connection issues with the host name (DB_HOST) set as m
 ```
 # Mail Notification (Mailpit)
 
-```php
+```
 Add the following environment variables to your .env configuration file. Then in a new browser window navigate to: http:://localhost:8025/ 
 
 MAIL_MAILER=smtp
@@ -84,7 +84,7 @@ Run php artisan scribe:generate
 
 ## Testing
 
-```php
+```
 On Mac/Linux Run touch database/database.sqlite to create your test database
 On windows create the above file in the database directory
 ```
